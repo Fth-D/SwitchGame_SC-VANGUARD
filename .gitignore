@@ -1,0 +1,26 @@
+# Build outputs
+x64/
+NX64/
+NX32/
+Debug/
+Release/
+Develop/
+*.obj
+*.pdb
+*.ilk
+*.exe
+*.nsp
+*.nso
+
+# Visual Studio
+.vs/
+*.vcxproj.user
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Nintendo SDK binaries (keep .props)
+libnns_atk.a
+libnns_atk.lib
+NintendoSDK_Application.bmp

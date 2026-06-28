@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<SoundProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.6.0.0" Platform="Any" xmlns="NintendoWare.SoundFoundation.FileFormats.NintendoWare">
+  <Head>
+    <Title>TestSoundProject</Title>
+  </Head>
+  <Body>
+    <SoundProject>
+      <ProjectSoundSetRoot>
+        <Items>
+          <ProjectSoundSet Name="SoundData">
+            <Parameters>
+              <FilePath>SoundData.fsst</FilePath>
+            </Parameters>
+          </ProjectSoundSet>
+        </Items>
+      </ProjectSoundSetRoot>
+      <SoundArchivePlayer>
+        <Parameters>
+          <SequenceTickRoundingMode>RoundUp</SequenceTickRoundingMode>
+          <SoundArchivePlayerSequenceSoundCount>64</SoundArchivePlayerSequenceSoundCount>
+          <SoundArchivePlayerSequenceTrackCount>64</SoundArchivePlayerSequenceTrackCount>
+          <SoundArchivePlayerStreamChannelCount>8</SoundArchivePlayerStreamChannelCount>
+          <SoundArchivePlayerStreamBufferTimes>1</SoundArchivePlayerStreamBufferTimes>
+          <SoundArchivePlayerStreamSoundCount>4</SoundArchivePlayerStreamSoundCount>
+          <SoundArchivePlayerWaveSoundCount>64</SoundArchivePlayerWaveSoundCount>
+        </Parameters>
+      </SoundArchivePlayer>
+      <Convert>
+        <Parameters>
+          <DoWarnUnreferencedItems>False</DoWarnUnreferencedItems>
+          <DoWarnDisableGroupItemTargets>False</DoWarnDisableGroupItemTargets>
+          <DoWarnPCBinariesForAACNotFound>True</DoWarnPCBinariesForAACNotFound>
+          <ExcludeStringTable>False</ExcludeStringTable>
+          <DoOutputPCBinariesForAAC>True</DoOutputPCBinariesForAAC>
+          <DoUseHardwareOpusDecoder>False</DoUseHardwareOpusDecoder>
+          <ExternalFileDirectoryPath>stream</ExternalFileDirectoryPath>
+          <UserManagementFileOutputDirectoryPath>userManagementFiles</UserManagementFileOutputDirectoryPath>
+          <IntermediateOutputDirectoryPath>cache</IntermediateOutputDirectoryPath>
+          <InGameEditCacheOutputDirectoryPath>editCache</InGameEditCacheOutputDirectoryPath>
+          <IsPreConvertCommandsEnabled>True</IsPreConvertCommandsEnabled>
+          <IsPostConvertCommandsEnabled>True</IsPostConvertCommandsEnabled>
+          <KeepIntermediateTextSequence>True</KeepIntermediateTextSequence>
+          <OutputLabel>False</OutputLabel>
+          <OutputDirectoryPath>output</OutputDirectoryPath>
+          <SmfTimebase>96</SmfTimebase>
+          <DoUseBuiltInWavePreprocessExe>True</DoUseBuiltInWavePreprocessExe>
+          <WavePreprocessExePath />
+        </Parameters>
+        <PreConvertCommands />
+        <PostConvertCommands />
+      </Convert>
+      <ItemNaming>
+        <Parameters>
+          <BankNamePrefix>BANK_</BankNamePrefix>
+          <CaseChange>ToUpper</CaseChange>
+          <GroupNamePrefix>GROUP_</GroupNamePrefix>
+          <HasPrefix>True</HasPrefix>
+          <InstrumentNamePrefix>INST_</InstrumentNamePrefix>
+          <InvalidCharChange>ReplaceToUnderscore</InvalidCharChange>
+          <PlayerNamePrefix>PLAYER_</PlayerNamePrefix>
+          <SequenceSoundNamePrefix>SEQ_</SequenceSoundNamePrefix>
+          <SequenceSoundSetNamePrefix>SEQSET_</SequenceSoundSetNamePrefix>
+          <StreamSoundNamePrefix>STRM_</StreamSoundNamePrefix>
+          <WaveArchiveNamePrefix>WARC_</WaveArchiveNamePrefix>
+          <WaveSoundNamePrefix>WSD_</WaveSoundNamePrefix>
+          <WaveSoundSetNamePrefix>WSDSET_</WaveSoundSetNamePrefix>
+          <ItemPastePostfix>_copy</ItemPastePostfix>
+          <EnabledNameDelimiter>True</EnabledNameDelimiter>
+          <NameDelimiter>.</NameDelimiter>
+        </Parameters>
+      </ItemNaming>
+      <CommentColumnText>
+        <Parameters>
+          <CommentColumnText>コメント</CommentColumnText>
+          <Comment1ColumnText>コメント1</Comment1ColumnText>
+          <Comment2ColumnText>コメント2</Comment2ColumnText>
+          <Comment3ColumnText>コメント3</Comment3ColumnText>
+          <Comment4ColumnText>コメント4</Comment4ColumnText>
+          <Comment5ColumnText>コメント5</Comment5ColumnText>
+          <Comment6ColumnText>コメント6</Comment6ColumnText>
+          <Comment7ColumnText>コメント7</Comment7ColumnText>
+          <Comment8ColumnText>コメント8</Comment8ColumnText>
+          <Comment9ColumnText>コメント9</Comment9ColumnText>
+        </Parameters>
+      </CommentColumnText>
+      <ColorComment>
+        <Parameters>
+          <ColorComment0 />
+          <ColorComment1 />
+          <ColorComment2 />
+          <ColorComment3 />
+          <ColorComment4 />
+          <ColorComment5 />
+          <ColorComment6 />
+          <ColorComment7 />
+          <ColorComment8 />
+        </Parameters>
+      </ColorComment>
+      <UserCommands>
+        <UserCommand Name="" Command="" IconFilePath="" />
+        <UserCommand Name="" Command="" IconFilePath="" />
+        <UserCommand Name="" Command="" IconFilePath="" />
+        <UserCommand Name="" Command="" IconFilePath="" />
+        <UserCommand Name="" Command="" IconFilePath="" />
+        <UserCommand Name="" Command="" IconFilePath="" />
+        <UserCommand Name="" Command="" IconFilePath="" />
+        <UserCommand Name="" Command="" IconFilePath="" />
+      </UserCommands>
+      <SoundListOutputs />
+      <UserParameterSettings>
+        <UserParameterSetting Enabled="true">
+          <UserParameterStructures />
+        </UserParameterSetting>
+        <UserParameterSetting Enabled="false">
+          <UserParameterStructures />
+        </UserParameterSetting>
+        <UserParameterSetting Enabled="false">
+          <UserParameterStructures />
+        </UserParameterSetting>
+        <UserParameterSetting Enabled="false">
+          <UserParameterStructures />
+        </UserParameterSetting>
+      </UserParameterSettings>
+      <ProjectSetting>
+        <Parameters>
+          <ProjectComment />
+        </Parameters>
+      </ProjectSetting>
+      <FileEvent>
+        <Parameters>
+          <IsFileSavePreCommandEnabled>False</IsFileSavePreCommandEnabled>
+          <IsFileSavePostCommandEnabled>False</IsFileSavePostCommandEnabled>
+          <FileSavePreCommandPath />
+          <FileSavePostCommandPath />
+        </Parameters>
+      </FileEvent>
+      <SndEdit>
+        <Parameters>
+          <SyncPort>54086</SyncPort>
+          <FuncPort>54087</FuncPort>
+          <CtrlPort>54088</CtrlPort>
+        </Parameters>
+      </SndEdit>
+      <Statistics>
+        <Parameters>
+          <EnabledIntegratedLoudnessThreshold>False</EnabledIntegratedLoudnessThreshold>
+          <IntegratedLoudnessThreshold>-24</IntegratedLoudnessThreshold>
+          <SequenceMaxMeasureDuration>180</SequenceMaxMeasureDuration>
+        </Parameters>
+      </Statistics>
+      <SoundArchiveSettings />
+    </SoundProject>
+  </Body>
+</SoundProject>

@@ -1,0 +1,1000 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SoundProjectConfiguration Platform="Any" Version="1.4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nwsw="NintendoWare.SoundMaker.WindowConfiguration" xmlns:nwsu="NintendoWare.SoundMaker.UriConfiguration" xmlns:nwsp="NintendoWare.SoundMaker.SoundProjectConfiguration" xmlns:nwrsp="NintendoWare.SoundMaker.PreviewConfiguration" xmlns:nwspc="NintendoWare.SoundMaker.SoundProjectConfigurationCommon">
+  <nwsw:Windows>
+    <nwsw:MainWindow Name="MainWindow">
+      <nwsw:Editor>
+        <nwsw:Tabs>
+          <nwsw:Tab Name="Main" SelectedIndex="0">
+            <nwsw:TabPages>
+              <nwsw:SoundSetTabPage FilePath="C:\work\05dev\SoundMakerProject\SoundData.fsst" TargetItemPath="@WaveSoundSets/WSDSET_0/SE_HIT" TargetViewType="WaveSound" />
+            </nwsw:TabPages>
+          </nwsw:Tab>
+          <nwsw:Tab Name="Sub">
+            <nwsw:TabPages />
+          </nwsw:Tab>
+        </nwsw:Tabs>
+      </nwsw:Editor>
+    </nwsw:MainWindow>
+  </nwsw:Windows>
+  <nwsp:DocumentViews>
+    <nwsp:SoundProjectDocumentView FilePath="SoundData.fspj">
+      <nwsp:ProjectTreeNodes>
+        <nwsp:TreeNode Name="SoundData">
+          <nwsp:TreeNodes>
+            <nwsp:TreeNode Name="@StreamSounds" Expanded="false" />
+            <nwsp:TreeNode Name="@WaveSoundSets">
+              <nwsp:TreeNodes>
+                <nwsp:TreeNode Name="WSDSET_0" Expanded="false" />
+              </nwsp:TreeNodes>
+            </nwsp:TreeNode>
+            <nwsp:TreeNode Name="@SequenceSounds" Expanded="false" />
+            <nwsp:TreeNode Name="@SequenceSoundSets" Expanded="false" />
+            <nwsp:TreeNode Name="@SoundSetBanks" Expanded="false" />
+            <nwsp:TreeNode Name="@WaveArchives" Expanded="false" />
+            <nwsp:TreeNode Name="@Groups" Expanded="false" />
+            <nwsp:TreeNode Name="@Players" Expanded="false" />
+          </nwsp:TreeNodes>
+        </nwsp:TreeNode>
+      </nwsp:ProjectTreeNodes>
+      <nwsp:ListDefaults>
+        <nwsp:List Name="StreamSoundList" SortKey="">
+          <nwsp:ListColumns>
+            <nwsp:ListColumn Name="SndEdit" Length="40" />
+            <nwsp:ListColumn Name="PreviewPlay" Length="32" />
+            <nwsp:ListColumn Name="Name" Length="128" />
+            <nwsp:ListColumn Name="WaveEncoding" Length="64" />
+            <nwsp:ListColumn Name="FilePath" Length="96" />
+            <nwsp:ListColumn Name="WaveTime" Length="64" />
+            <nwsp:ListColumn Name="IsPrefetchEnabled" Length="60" />
+            <nwsp:ListColumn Name="IsResampleEnabled" Length="40" />
+            <nwsp:ListColumn Name="SampleRate" Length="62" />
+            <nwsp:ListColumn Name="WaveBitRate" Length="62" />
+            <nwsp:ListColumn Name="WaveSampleBit" Length="62" />
+            <nwsp:ListColumn Name="WaveChannel" Length="68" />
+            <nwsp:ListColumn Name="IsDownMixEnabled" Length="40" />
+            <nwsp:ListColumn Name="Volume" Length="48" />
+            <nwsp:ListColumn Name="IntegratedLoudness" Length="48" />
+            <nwsp:ListColumn Name="PlayerPriority" Length="58" />
+            <nwsp:ListColumn Name="PlayerReference" Length="128" />
+            <nwsp:ListColumn Name="ActorPlayer" Length="58" />
+            <nwsp:ListColumn Name="SinglePlayType" Length="96" />
+            <nwsp:ListColumn Name="SinglePlayEffectiveDuration" Length="64" />
+            <nwsp:ListColumn Name="RemoteFilter" Length="48" Visible="false" />
+            <nwsp:ListColumn Name="Sound3D/Enable3DVolume" Length="32" />
+            <nwsp:ListColumn Name="Sound3D/Enable3DPan" Length="32" />
+            <nwsp:ListColumn Name="Sound3D/Enable3DSurroundPan" Length="32" />
+            <nwsp:ListColumn Name="Sound3D/Enable3DPriority" Length="32" />
+            <nwsp:ListColumn Name="Sound3D/Enable3DFilter" Length="40" />
+            <nwsp:ListColumn Name="Sound3D/DecayCurve3D" Length="64" />
+            <nwsp:ListColumn Name="Sound3D/DecayRatio3D" Length="52" />
+            <nwsp:ListColumn Name="Sound3D/DopplerFactor3D" Length="96" />
+            <nwsp:ListColumn Name="PanMode" Length="58" />
+            <nwsp:ListColumn Name="PanCurve" Length="112" />
+            <nwsp:ListColumn Name="FrontBypass" Length="50" Visible="false" />
+            <nwsp:ListColumn Name="Pitch" Length="64" />
+            <nwsp:ListColumn Name="Sends/AuxASend" Length="48" />
+            <nwsp:ListColumn Name="Sends/AuxBSend" Length="48" />
+            <nwsp:ListColumn Name="Sends/AuxCSend" Length="48" />
+            <nwsp:ListColumn Name="Sends/MainSend" Length="48" />
+            <nwsp:ListColumn Name="UserParameter" Length="80" />
+            <nwsp:ListColumn Name="UserParameter1" Length="80" Visible="false" />
+            <nwsp:ListColumn Name="UserParameter2" Length="80" Visible="false" />
+            <nwsp:ListColumn Name="UserParameter3" Length="80" Visible="false" />
+            <nwsp:ListColumn Name="Comment" Length="256" />
+            <nwsp:ListColumn Name="Comment1" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment2" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment3" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment4" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment5" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment6" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment7" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment8" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment9" Length="256" Visible="false" />
+          </nwsp:ListColumns>
+        </nwsp:List>
+        <nwsp:List Name="StreamSoundTrackList" SortKey="">
+          <nwsp:ListColumns>
+            <nwsp:ListColumn Name="TrackNo" Length="64" />
+            <nwsp:ListColumn Name="ChannelNo" Length="64" />
+            <nwsp:ListColumn Name="PreviewMute" Length="32" />
+            <nwsp:ListColumn Name="PreviewSoloPlay" Length="32" />
+            <nwsp:ListColumn Name="FilePath" Length="96" />
+            <nwsp:ListColumn Name="WaveTime" Length="64" />
+            <nwsp:ListColumn Name="SampleRate" Length="62" />
+            <nwsp:ListColumn Name="WaveBitRate" Length="62" />
+            <nwsp:ListColumn Name="WaveSampleBit" Length="62" />
+            <nwsp:ListColumn Name="WaveChannel" Length="68" />
+            <nwsp:ListColumn Name="Volume" Length="48" />
+            <nwsp:ListColumn Name="Pan" Length="58" />
+            <nwsp:ListColumn Name="SurroundPan" Length="36" />
+            <nwsp:ListColumn Name="FrontBypass" Length="50" Visible="false" />
+            <nwsp:ListColumn Name="LPF" Length="48" />
+            <nwsp:ListColumn Name="BiquadType" Length="128" />
+            <nwsp:ListColumn Name="Biquad" Length="60" />
+            <nwsp:ListColumn Name="Sends/AuxASend" Length="48" />
+            <nwsp:ListColumn Name="Sends/AuxBSend" Length="48" />
+            <nwsp:ListColumn Name="Sends/AuxCSend" Length="48" />
+            <nwsp:ListColumn Name="Sends/MainSend" Length="48" />
+            <nwsp:ListColumn Name="Comment" Length="256" />
+            <nwsp:ListColumn Name="Comment1" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment2" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment3" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment4" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment5" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment6" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment7" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment8" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment9" Length="256" Visible="false" />
+          </nwsp:ListColumns>
+        </nwsp:List>
+        <nwsp:List Name="WaveSoundSetList" SortKey="">
+          <nwsp:ListColumns>
+            <nwsp:ListColumn Name="Name" Length="128" />
+            <nwsp:ListColumn Name="WaveArchiveReference" Length="80" />
+            <nwsp:ListColumn Name="Comment" Length="256" />
+            <nwsp:ListColumn Name="Comment1" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment2" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment3" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment4" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment5" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment6" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment7" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment8" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment9" Length="256" Visible="false" />
+          </nwsp:ListColumns>
+        </nwsp:List>
+        <nwsp:List Name="WaveSoundSetItemList" SortKey="">
+          <nwsp:ListColumns>
+            <nwsp:ListColumn Name="SndEdit" Length="40" />
+            <nwsp:ListColumn Name="PreviewPlay" Length="32" />
+            <nwsp:ListColumn Name="Name" Length="128" />
+            <nwsp:ListColumn Name="WaveEncoding" Length="64" />
+            <nwsp:ListColumn Name="FilePath" Length="96" />
+            <nwsp:ListColumn Name="WaveTime" Length="64" />
+            <nwsp:ListColumn Name="IsResampleEnabled" Length="40" />
+            <nwsp:ListColumn Name="SampleRate" Length="62" />
+            <nwsp:ListColumn Name="WaveBitRate" Length="62" />
+            <nwsp:ListColumn Name="WaveSampleBit" Length="62" />
+            <nwsp:ListColumn Name="WaveChannel" Length="68" />
+            <nwsp:ListColumn Name="IsDownMixEnabled" Length="40" />
+            <nwsp:ListColumn Name="DataSize" Length="70" />
+            <nwsp:ListColumn Name="Volume" Length="48" />
+            <nwsp:ListColumn Name="IntegratedLoudness" Length="48" />
+            <nwsp:ListColumn Name="ChannelPriority" Length="58" />
+            <nwsp:ListColumn Name="PlayerPriority" Length="58" />
+            <nwsp:ListColumn Name="PlayerReference" Length="128" />
+            <nwsp:ListColumn Name="ActorPlayer" Length="58" />
+            <nwsp:ListColumn Name="SinglePlayType" Length="96" />
+            <nwsp:ListColumn Name="SinglePlayEffectiveDuration" Length="64" />
+            <nwsp:ListColumn Name="Pan" Length="36" />
+            <nwsp:ListColumn Name="SurroundPan" Length="36" />
+            <nwsp:ListColumn Name="Pitch" Length="64" />
+            <nwsp:ListColumn Name="LPF" Length="48" />
+            <nwsp:ListColumn Name="BiquadType" Length="128" />
+            <nwsp:ListColumn Name="Biquad" Length="60" />
+            <nwsp:ListColumn Name="EnvelopeRelease" Length="32" />
+            <nwsp:ListColumn Name="Sends/AuxASend" Length="48" />
+            <nwsp:ListColumn Name="Sends/AuxBSend" Length="48" />
+            <nwsp:ListColumn Name="Sends/AuxCSend" Length="48" />
+            <nwsp:ListColumn Name="Sends/MainSend" Length="48" />
+            <nwsp:ListColumn Name="RemoteFilter" Length="48" Visible="false" />
+            <nwsp:ListColumn Name="ReleasePriorityFixed" Length="80" />
+            <nwsp:ListColumn Name="Sound3D/Enable3DVolume" Length="32" />
+            <nwsp:ListColumn Name="Sound3D/Enable3DPan" Length="32" />
+            <nwsp:ListColumn Name="Sound3D/Enable3DSurroundPan" Length="32" />
+            <nwsp:ListColumn Name="Sound3D/Enable3DPriority" Length="32" />
+            <nwsp:ListColumn Name="Sound3D/Enable3DFilter" Length="40" />
+            <nwsp:ListColumn Name="Sound3D/DecayCurve3D" Length="64" />
+            <nwsp:ListColumn Name="Sound3D/DecayRatio3D" Length="52" />
+            <nwsp:ListColumn Name="Sound3D/DopplerFactor3D" Length="96" />
+            <nwsp:ListColumn Name="PanMode" Length="58" />
+            <nwsp:ListColumn Name="PanCurve" Length="112" />
+            <nwsp:ListColumn Name="FrontBypass" Length="85" Visible="false" />
+            <nwsp:ListColumn Name="UserParameter" Length="80" />
+            <nwsp:ListColumn Name="UserParameter1" Length="80" Visible="false" />
+            <nwsp:ListColumn Name="UserParameter2" Length="80" Visible="false" />
+            <nwsp:ListColumn Name="UserParameter3" Length="80" Visible="false" />
+            <nwsp:ListColumn Name="Comment" Length="256" />
+            <nwsp:ListColumn Name="Comment1" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment2" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment3" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment4" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment5" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment6" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment7" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment8" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment9" Length="256" Visible="false" />
+          </nwsp:ListColumns>
+        </nwsp:List>
+        <nwsp:List Name="SequenceSoundSetList" SortKey="">
+          <nwsp:ListColumns>
+            <nwsp:ListColumn Name="Name" Length="128" />
+            <nwsp:ListColumn Name="Comment" Length="256" />
+            <nwsp:ListColumn Name="Comment1" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment2" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment3" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment4" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment5" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment6" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment7" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment8" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment9" Length="256" Visible="false" />
+          </nwsp:ListColumns>
+        </nwsp:List>
+        <nwsp:List Name="SequenceSoundSetItemList" SortKey="">
+          <nwsp:ListColumns>
+            <nwsp:ListColumn Name="SndEdit" Length="40" />
+            <nwsp:ListColumn Name="PreviewPlay" Length="32" />
+            <nwsp:ListColumn Name="Name" Length="128" />
+            <nwsp:ListColumn Name="SequenceSoundFileType" Length="68" />
+            <nwsp:ListColumn Name="FilePath" Length="96" />
+            <nwsp:ListColumn Name="StartPosition" Length="88" />
+            <nwsp:ListColumn Name="SoundSetBankReference0" Length="128" />
+            <nwsp:ListColumn Name="SoundSetBankReference1" Length="128" />
+            <nwsp:ListColumn Name="SoundSetBankReference2" Length="128" />
+            <nwsp:ListColumn Name="SoundSetBankReference3" Length="128" />
+            <nwsp:ListColumn Name="PlayerReference" Length="128" />
+            <nwsp:ListColumn Name="Volume" Length="48" />
+            <nwsp:ListColumn Name="IntegratedLoudness" Length="48" />
+            <nwsp:ListColumn Name="ChannelPriority" Length="58" />
+            <nwsp:ListColumn Name="PlayerPriority" Length="58" />
+            <nwsp:ListColumn Name="ActorPlayer" Length="58" />
+            <nwsp:ListColumn Name="SinglePlayType" Length="96" />
+            <nwsp:ListColumn Name="SinglePlayEffectiveDuration" Length="64" />
+            <nwsp:ListColumn Name="RemoteFilter" Length="48" Visible="false" />
+            <nwsp:ListColumn Name="ReleasePriorityFixed" Length="80" />
+            <nwsp:ListColumn Name="Sound3D/Enable3DVolume" Length="32" />
+            <nwsp:ListColumn Name="Sound3D/Enable3DPan" Length="32" />
+            <nwsp:ListColumn Name="Sound3D/Enable3DSurroundPan" Length="32" />
+            <nwsp:ListColumn Name="Sound3D/Enable3DPriority" Length="32" />
+            <nwsp:ListColumn Name="Sound3D/Enable3DFilter" Length="40" />
+            <nwsp:ListColumn Name="Sound3D/DecayCurve3D" Length="64" />
+            <nwsp:ListColumn Name="Sound3D/DecayRatio3D" Length="52" />
+            <nwsp:ListColumn Name="Sound3D/DopplerFactor3D" Length="96" />
+            <nwsp:ListColumn Name="FrontBypass" Length="85" Visible="false" />
+            <nwsp:ListColumn Name="MaximumVoiceCount" Length="32" />
+            <nwsp:ListColumn Name="UserParameter" Length="80" />
+            <nwsp:ListColumn Name="UserParameter1" Length="80" Visible="false" />
+            <nwsp:ListColumn Name="UserParameter2" Length="80" Visible="false" />
+            <nwsp:ListColumn Name="UserParameter3" Length="80" Visible="false" />
+            <nwsp:ListColumn Name="Comment" Length="256" />
+            <nwsp:ListColumn Name="Comment1" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment2" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment3" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment4" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment5" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment6" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment7" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment8" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment9" Length="256" Visible="false" />
+          </nwsp:ListColumns>
+        </nwsp:List>
+        <nwsp:List Name="SequenceSoundList" SortKey="">
+          <nwsp:ListColumns>
+            <nwsp:ListColumn Name="SndEdit" Length="40" />
+            <nwsp:ListColumn Name="PreviewPlay" Length="32" />
+            <nwsp:ListColumn Name="Name" Length="128" />
+            <nwsp:ListColumn Name="SequenceSoundFileType" Length="68" />
+            <nwsp:ListColumn Name="FilePath" Length="96" />
+            <nwsp:ListColumn Name="StartPosition" Length="88" />
+            <nwsp:ListColumn Name="SoundSetBankReference0" Length="128" />
+            <nwsp:ListColumn Name="SoundSetBankReference1" Length="128" />
+            <nwsp:ListColumn Name="SoundSetBankReference2" Length="128" />
+            <nwsp:ListColumn Name="SoundSetBankReference3" Length="128" />
+            <nwsp:ListColumn Name="PlayerReference" Length="128" />
+            <nwsp:ListColumn Name="Volume" Length="48" />
+            <nwsp:ListColumn Name="IntegratedLoudness" Length="48" />
+            <nwsp:ListColumn Name="ChannelPriority" Length="58" />
+            <nwsp:ListColumn Name="PlayerPriority" Length="58" />
+            <nwsp:ListColumn Name="ActorPlayer" Length="58" />
+            <nwsp:ListColumn Name="SinglePlayType" Length="96" />
+            <nwsp:ListColumn Name="SinglePlayEffectiveDuration" Length="64" />
+            <nwsp:ListColumn Name="RemoteFilter" Length="48" Visible="false" />
+            <nwsp:ListColumn Name="ReleasePriorityFixed" Length="80" />
+            <nwsp:ListColumn Name="Sound3D/Enable3DVolume" Length="32" />
+            <nwsp:ListColumn Name="Sound3D/Enable3DPan" Length="32" />
+            <nwsp:ListColumn Name="Sound3D/Enable3DSurroundPan" Length="32" />
+            <nwsp:ListColumn Name="Sound3D/Enable3DPriority" Length="32" />
+            <nwsp:ListColumn Name="Sound3D/Enable3DFilter" Length="40" />
+            <nwsp:ListColumn Name="Sound3D/DecayCurve3D" Length="64" />
+            <nwsp:ListColumn Name="Sound3D/DecayRatio3D" Length="52" />
+            <nwsp:ListColumn Name="Sound3D/DopplerFactor3D" Length="96" />
+            <nwsp:ListColumn Name="FrontBypass" Length="85" Visible="false" />
+            <nwsp:ListColumn Name="MaximumVoiceCount" Length="32" />
+            <nwsp:ListColumn Name="UserParameter" Length="80" />
+            <nwsp:ListColumn Name="UserParameter1" Length="80" Visible="false" />
+            <nwsp:ListColumn Name="UserParameter2" Length="80" Visible="false" />
+            <nwsp:ListColumn Name="UserParameter3" Length="80" Visible="false" />
+            <nwsp:ListColumn Name="Comment" Length="256" />
+            <nwsp:ListColumn Name="Comment1" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment2" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment3" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment4" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment5" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment6" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment7" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment8" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment9" Length="256" Visible="false" />
+          </nwsp:ListColumns>
+        </nwsp:List>
+        <nwsp:List Name="BankList" SortKey="">
+          <nwsp:ListColumns>
+            <nwsp:ListColumn Name="SndEdit" Length="40" />
+            <nwsp:ListColumn Name="Name" Length="128" />
+            <nwsp:ListColumn Name="WaveArchiveReference" Length="80" />
+            <nwsp:ListColumn Name="FilePath" Length="96" />
+            <nwsp:ListColumn Name="DataSize" Length="70" />
+            <nwsp:ListColumn Name="Comment" Length="256" />
+            <nwsp:ListColumn Name="Comment1" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment2" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment3" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment4" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment5" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment6" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment7" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment8" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment9" Length="256" Visible="false" />
+          </nwsp:ListColumns>
+        </nwsp:List>
+        <nwsp:List Name="WaveArchiveList" SortKey="">
+          <nwsp:ListColumns>
+            <nwsp:ListColumn Name="Name" Length="128" />
+            <nwsp:ListColumn Name="WaveArchiveLoadType" Length="64" />
+            <nwsp:ListColumn Name="Comment" Length="256" />
+            <nwsp:ListColumn Name="Comment1" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment2" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment3" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment4" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment5" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment6" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment7" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment8" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment9" Length="256" Visible="false" />
+          </nwsp:ListColumns>
+        </nwsp:List>
+        <nwsp:List Name="PlayerList" SortKey="">
+          <nwsp:ListColumns>
+            <nwsp:ListColumn Name="Name" Length="128" />
+            <nwsp:ListColumn Name="PlayerSoundLimit" Length="80" />
+            <nwsp:ListColumn Name="PlayerHeapSize" Length="64" />
+            <nwsp:ListColumn Name="Comment" Length="256" />
+            <nwsp:ListColumn Name="Comment1" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment2" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment3" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment4" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment5" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment6" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment7" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment8" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment9" Length="256" Visible="false" />
+          </nwsp:ListColumns>
+        </nwsp:List>
+        <nwsp:List Name="GroupList" SortKey="">
+          <nwsp:ListColumns>
+            <nwsp:ListColumn Name="Name" Length="128" />
+            <nwsp:ListColumn Name="DataSize" Length="70" />
+            <nwsp:ListColumn Name="GroupOutputType" Length="72" />
+            <nwsp:ListColumn Name="Comment" Length="256" />
+            <nwsp:ListColumn Name="Comment1" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment2" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment3" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment4" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment5" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment6" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment7" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment8" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment9" Length="256" Visible="false" />
+          </nwsp:ListColumns>
+        </nwsp:List>
+        <nwsp:List Name="GroupItemList" SortKey="">
+          <nwsp:ListColumns>
+            <nwsp:ListColumn Name="TargetItemReference" Length="128" />
+            <nwsp:ListColumn Name="GroupItemTargetSoundSet" Length="128" />
+            <nwsp:ListColumn Name="GroupItemRegisterType" Length="160" />
+            <nwsp:ListColumn Name="Comment" Length="256" />
+            <nwsp:ListColumn Name="Comment1" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment2" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment3" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment4" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment5" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment6" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment7" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment8" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment9" Length="256" Visible="false" />
+          </nwsp:ListColumns>
+        </nwsp:List>
+        <nwsp:List Name="InstrumentList" SortKey="">
+          <nwsp:ListColumns>
+            <nwsp:ListColumn Name="ProgramNo" Length="58" />
+            <nwsp:ListColumn Name="Name" Length="128" />
+            <nwsp:ListColumn Name="WaveEncoding" Length="64" />
+            <nwsp:ListColumn Name="FilePath" Length="96" />
+            <nwsp:ListColumn Name="WaveTime" Length="64" />
+            <nwsp:ListColumn Name="WaveTick" Length="64" />
+            <nwsp:ListColumn Name="IsResampleEnabled" Length="40" />
+            <nwsp:ListColumn Name="SampleRate" Length="62" />
+            <nwsp:ListColumn Name="WaveBitRate" Length="62" />
+            <nwsp:ListColumn Name="WaveSampleBit" Length="62" />
+            <nwsp:ListColumn Name="WaveChannel" Length="68" />
+            <nwsp:ListColumn Name="IsDownMixEnabled" Length="40" />
+            <nwsp:ListColumn Name="DataSize" Length="70" />
+            <nwsp:ListColumn Name="OriginalKey" Length="76" />
+            <nwsp:ListColumn Name="Envelope/Attack" Length="32" />
+            <nwsp:ListColumn Name="Envelope/Hold" Length="32" />
+            <nwsp:ListColumn Name="Envelope/Decay" Length="32" />
+            <nwsp:ListColumn Name="Envelope/Sustain" Length="32" />
+            <nwsp:ListColumn Name="Envelope/Release" Length="32" />
+            <nwsp:ListColumn Name="Volume" Length="48" />
+            <nwsp:ListColumn Name="PitchSemitones" Length="72" />
+            <nwsp:ListColumn Name="PitchCents" Length="72" />
+            <nwsp:ListColumn Name="InterpolationType" Length="85" />
+            <nwsp:ListColumn Name="Comment" Length="256" />
+            <nwsp:ListColumn Name="Comment1" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment2" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment3" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment4" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment5" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment6" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment7" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment8" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment9" Length="256" Visible="false" />
+          </nwsp:ListColumns>
+        </nwsp:List>
+        <nwsp:List Name="PercussionList" SortKey="">
+          <nwsp:ListColumns>
+            <nwsp:ListColumn Name="WaveEncoding" Length="64" />
+            <nwsp:ListColumn Name="FilePath" Length="96" />
+            <nwsp:ListColumn Name="WaveTime" Length="64" />
+            <nwsp:ListColumn Name="WaveTick" Length="64" />
+            <nwsp:ListColumn Name="SampleRate" Length="62" />
+            <nwsp:ListColumn Name="WaveBitRate" Length="62" />
+            <nwsp:ListColumn Name="WaveSampleBit" Length="62" />
+            <nwsp:ListColumn Name="WaveChannel" Length="68" />
+            <nwsp:ListColumn Name="DataSize" Length="70" />
+            <nwsp:ListColumn Name="OriginalKey" Length="76" />
+            <nwsp:ListColumn Name="Envelope/Attack" Length="32" />
+            <nwsp:ListColumn Name="Envelope/Hold" Length="32" />
+            <nwsp:ListColumn Name="Envelope/Decay" Length="32" />
+            <nwsp:ListColumn Name="Envelope/Sustain" Length="32" />
+            <nwsp:ListColumn Name="Envelope/Release" Length="32" />
+            <nwsp:ListColumn Name="Volume" Length="48" />
+            <nwsp:ListColumn Name="PitchSemitones" Length="72" />
+            <nwsp:ListColumn Name="PitchCents" Length="72" />
+            <nwsp:ListColumn Name="Pan" Length="32" />
+            <nwsp:ListColumn Name="PercussionMode" Length="70" />
+            <nwsp:ListColumn Name="KeyGroup" Length="68" />
+            <nwsp:ListColumn Name="InterpolationType" Length="85" />
+            <nwsp:ListColumn Name="Comment" Length="256" />
+            <nwsp:ListColumn Name="Comment1" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment2" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment3" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment4" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment5" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment6" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment7" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment8" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment9" Length="256" Visible="false" />
+          </nwsp:ListColumns>
+        </nwsp:List>
+        <nwsp:List Name="FindResultList" SortKey="">
+          <nwsp:ListColumns>
+            <nwsp:ListColumn Name="Name" Length="128" />
+            <nwsp:ListColumn Name="ItemLocation" Length="128" />
+            <nwsp:ListColumn Name="Comment" Length="256" />
+            <nwsp:ListColumn Name="Comment1" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment2" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment3" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment4" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment5" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment6" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment7" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment8" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment9" Length="256" Visible="false" />
+          </nwsp:ListColumns>
+        </nwsp:List>
+        <nwsp:List Name="MultipleBankList" SortKey="">
+          <nwsp:ListColumns>
+            <nwsp:ListColumn Name="SoundSetBankReferences" Length="128" />
+          </nwsp:ListColumns>
+        </nwsp:List>
+        <nwsp:List Name="HistoryList" SortKey="">
+          <nwsp:ListColumns>
+            <nwsp:ListColumn Name="Name" Length="128" />
+            <nwsp:ListColumn Name="DateTime" Length="128" />
+          </nwsp:ListColumns>
+        </nwsp:List>
+        <nwsp:List Name="MeasureReferenceCountFilePath" SortKey="">
+          <nwsp:ListColumns>
+            <nwsp:ListColumn Name="FilePath" Length="192" />
+            <nwsp:ListColumn Name="ReferenceCount" Length="80" />
+          </nwsp:ListColumns>
+        </nwsp:List>
+        <nwsp:List Name="MeasureReferenceCountInstrument" SortKey="">
+          <nwsp:ListColumns>
+            <nwsp:ListColumn Name="Name" Length="128" />
+            <nwsp:ListColumn Name="ReferenceCount" Length="80" />
+            <nwsp:ListColumn Name="FilePath" Length="192" />
+          </nwsp:ListColumns>
+        </nwsp:List>
+        <nwsp:List Name="SndEditList" SortKey="">
+          <nwsp:ListColumns>
+            <nwsp:ListColumn Name="SndEdit" Length="40" />
+            <nwsp:ListColumn Name="SndEditEnabled" Length="32" />
+            <nwsp:ListColumn Name="PreviewPlay" Length="32" />
+            <nwsp:ListColumn Name="Name" Length="128" />
+          </nwsp:ListColumns>
+        </nwsp:List>
+      </nwsp:ListDefaults>
+    </nwsp:SoundProjectDocumentView>
+    <nwsp:SoundSetDocumentView FilePath="SoundData.fsst">
+      <nwsp:StreamSoundTrackListView SplitterPositionRatio="0.49763033175355448" />
+      <nwsp:WaveSoundSetListView SplitterPositionRatio="0.49875311720698257" />
+      <nwsp:SequenceSoundSetListView />
+      <nwsp:GroupListView />
+      <nwsp:Lists>
+        <nwsp:List Name="StreamSoundList" SortKey="">
+          <nwsp:ListColumns>
+            <nwsp:ListColumn Name="SndEdit" Length="40" />
+            <nwsp:ListColumn Name="PreviewPlay" Length="32" />
+            <nwsp:ListColumn Name="Name" Length="128" />
+            <nwsp:ListColumn Name="WaveEncoding" Length="64" />
+            <nwsp:ListColumn Name="FilePath" Length="96" />
+            <nwsp:ListColumn Name="WaveTime" Length="64" />
+            <nwsp:ListColumn Name="IsPrefetchEnabled" Length="60" />
+            <nwsp:ListColumn Name="IsResampleEnabled" Length="40" />
+            <nwsp:ListColumn Name="SampleRate" Length="62" />
+            <nwsp:ListColumn Name="WaveBitRate" Length="62" />
+            <nwsp:ListColumn Name="WaveSampleBit" Length="62" />
+            <nwsp:ListColumn Name="WaveChannel" Length="68" />
+            <nwsp:ListColumn Name="IsDownMixEnabled" Length="40" />
+            <nwsp:ListColumn Name="Volume" Length="48" />
+            <nwsp:ListColumn Name="IntegratedLoudness" Length="48" />
+            <nwsp:ListColumn Name="PlayerPriority" Length="58" />
+            <nwsp:ListColumn Name="PlayerReference" Length="128" />
+            <nwsp:ListColumn Name="ActorPlayer" Length="58" />
+            <nwsp:ListColumn Name="SinglePlayType" Length="96" />
+            <nwsp:ListColumn Name="SinglePlayEffectiveDuration" Length="64" />
+            <nwsp:ListColumn Name="RemoteFilter" Length="48" Visible="false" />
+            <nwsp:ListColumn Name="Sound3D/Enable3DVolume" Length="32" />
+            <nwsp:ListColumn Name="Sound3D/Enable3DPan" Length="32" />
+            <nwsp:ListColumn Name="Sound3D/Enable3DSurroundPan" Length="32" />
+            <nwsp:ListColumn Name="Sound3D/Enable3DPriority" Length="32" />
+            <nwsp:ListColumn Name="Sound3D/Enable3DFilter" Length="40" />
+            <nwsp:ListColumn Name="Sound3D/DecayCurve3D" Length="64" />
+            <nwsp:ListColumn Name="Sound3D/DecayRatio3D" Length="52" />
+            <nwsp:ListColumn Name="Sound3D/DopplerFactor3D" Length="96" />
+            <nwsp:ListColumn Name="PanMode" Length="58" />
+            <nwsp:ListColumn Name="PanCurve" Length="112" />
+            <nwsp:ListColumn Name="FrontBypass" Length="50" Visible="false" />
+            <nwsp:ListColumn Name="Pitch" Length="64" />
+            <nwsp:ListColumn Name="Sends/AuxASend" Length="48" />
+            <nwsp:ListColumn Name="Sends/AuxBSend" Length="48" />
+            <nwsp:ListColumn Name="Sends/AuxCSend" Length="48" />
+            <nwsp:ListColumn Name="Sends/MainSend" Length="48" />
+            <nwsp:ListColumn Name="UserParameter" Length="80" />
+            <nwsp:ListColumn Name="UserParameter1" Length="80" Visible="false" />
+            <nwsp:ListColumn Name="UserParameter2" Length="80" Visible="false" />
+            <nwsp:ListColumn Name="UserParameter3" Length="80" Visible="false" />
+            <nwsp:ListColumn Name="Comment" Length="256" />
+            <nwsp:ListColumn Name="Comment1" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment2" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment3" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment4" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment5" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment6" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment7" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment8" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment9" Length="256" Visible="false" />
+          </nwsp:ListColumns>
+        </nwsp:List>
+        <nwsp:List Name="StreamSoundTrackList" SortKey="">
+          <nwsp:ListColumns>
+            <nwsp:ListColumn Name="TrackNo" Length="64" />
+            <nwsp:ListColumn Name="ChannelNo" Length="64" />
+            <nwsp:ListColumn Name="PreviewMute" Length="32" />
+            <nwsp:ListColumn Name="PreviewSoloPlay" Length="32" />
+            <nwsp:ListColumn Name="FilePath" Length="96" />
+            <nwsp:ListColumn Name="WaveTime" Length="64" />
+            <nwsp:ListColumn Name="SampleRate" Length="62" />
+            <nwsp:ListColumn Name="WaveBitRate" Length="62" />
+            <nwsp:ListColumn Name="WaveSampleBit" Length="62" />
+            <nwsp:ListColumn Name="WaveChannel" Length="68" />
+            <nwsp:ListColumn Name="Volume" Length="48" />
+            <nwsp:ListColumn Name="Pan" Length="58" />
+            <nwsp:ListColumn Name="SurroundPan" Length="36" />
+            <nwsp:ListColumn Name="FrontBypass" Length="50" Visible="false" />
+            <nwsp:ListColumn Name="LPF" Length="48" />
+            <nwsp:ListColumn Name="BiquadType" Length="128" />
+            <nwsp:ListColumn Name="Biquad" Length="60" />
+            <nwsp:ListColumn Name="Sends/AuxASend" Length="48" />
+            <nwsp:ListColumn Name="Sends/AuxBSend" Length="48" />
+            <nwsp:ListColumn Name="Sends/AuxCSend" Length="48" />
+            <nwsp:ListColumn Name="Sends/MainSend" Length="48" />
+            <nwsp:ListColumn Name="Comment" Length="256" />
+            <nwsp:ListColumn Name="Comment1" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment2" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment3" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment4" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment5" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment6" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment7" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment8" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment9" Length="256" Visible="false" />
+          </nwsp:ListColumns>
+        </nwsp:List>
+        <nwsp:List Name="WaveSoundSetList" SortKey="">
+          <nwsp:ListColumns>
+            <nwsp:ListColumn Name="Name" Length="128" />
+            <nwsp:ListColumn Name="WaveArchiveReference" Length="80" />
+            <nwsp:ListColumn Name="Comment" Length="256" />
+            <nwsp:ListColumn Name="Comment1" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment2" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment3" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment4" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment5" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment6" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment7" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment8" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment9" Length="256" Visible="false" />
+          </nwsp:ListColumns>
+        </nwsp:List>
+        <nwsp:List Name="WaveSoundSetItemList" SortKey="">
+          <nwsp:ListColumns>
+            <nwsp:ListColumn Name="SndEdit" Length="40" />
+            <nwsp:ListColumn Name="PreviewPlay" Length="32" />
+            <nwsp:ListColumn Name="Name" Length="128" />
+            <nwsp:ListColumn Name="WaveEncoding" Length="64" />
+            <nwsp:ListColumn Name="FilePath" Length="96" />
+            <nwsp:ListColumn Name="WaveTime" Length="64" />
+            <nwsp:ListColumn Name="IsResampleEnabled" Length="40" />
+            <nwsp:ListColumn Name="SampleRate" Length="62" />
+            <nwsp:ListColumn Name="WaveBitRate" Length="62" />
+            <nwsp:ListColumn Name="WaveSampleBit" Length="62" />
+            <nwsp:ListColumn Name="WaveChannel" Length="68" />
+            <nwsp:ListColumn Name="IsDownMixEnabled" Length="40" />
+            <nwsp:ListColumn Name="DataSize" Length="70" />
+            <nwsp:ListColumn Name="Volume" Length="48" />
+            <nwsp:ListColumn Name="IntegratedLoudness" Length="48" />
+            <nwsp:ListColumn Name="ChannelPriority" Length="58" />
+            <nwsp:ListColumn Name="PlayerPriority" Length="58" />
+            <nwsp:ListColumn Name="PlayerReference" Length="128" />
+            <nwsp:ListColumn Name="ActorPlayer" Length="58" />
+            <nwsp:ListColumn Name="SinglePlayType" Length="96" />
+            <nwsp:ListColumn Name="SinglePlayEffectiveDuration" Length="64" />
+            <nwsp:ListColumn Name="Pan" Length="36" />
+            <nwsp:ListColumn Name="SurroundPan" Length="36" />
+            <nwsp:ListColumn Name="Pitch" Length="64" />
+            <nwsp:ListColumn Name="LPF" Length="48" />
+            <nwsp:ListColumn Name="BiquadType" Length="128" />
+            <nwsp:ListColumn Name="Biquad" Length="60" />
+            <nwsp:ListColumn Name="EnvelopeRelease" Length="32" />
+            <nwsp:ListColumn Name="Sends/AuxASend" Length="48" />
+            <nwsp:ListColumn Name="Sends/AuxBSend" Length="48" />
+            <nwsp:ListColumn Name="Sends/AuxCSend" Length="48" />
+            <nwsp:ListColumn Name="Sends/MainSend" Length="48" />
+            <nwsp:ListColumn Name="RemoteFilter" Length="48" Visible="false" />
+            <nwsp:ListColumn Name="ReleasePriorityFixed" Length="80" />
+            <nwsp:ListColumn Name="Sound3D/Enable3DVolume" Length="32" />
+            <nwsp:ListColumn Name="Sound3D/Enable3DPan" Length="32" />
+            <nwsp:ListColumn Name="Sound3D/Enable3DSurroundPan" Length="32" />
+            <nwsp:ListColumn Name="Sound3D/Enable3DPriority" Length="32" />
+            <nwsp:ListColumn Name="Sound3D/Enable3DFilter" Length="40" />
+            <nwsp:ListColumn Name="Sound3D/DecayCurve3D" Length="64" />
+            <nwsp:ListColumn Name="Sound3D/DecayRatio3D" Length="52" />
+            <nwsp:ListColumn Name="Sound3D/DopplerFactor3D" Length="96" />
+            <nwsp:ListColumn Name="PanMode" Length="58" />
+            <nwsp:ListColumn Name="PanCurve" Length="112" />
+            <nwsp:ListColumn Name="FrontBypass" Length="85" Visible="false" />
+            <nwsp:ListColumn Name="UserParameter" Length="80" />
+            <nwsp:ListColumn Name="UserParameter1" Length="80" Visible="false" />
+            <nwsp:ListColumn Name="UserParameter2" Length="80" Visible="false" />
+            <nwsp:ListColumn Name="UserParameter3" Length="80" Visible="false" />
+            <nwsp:ListColumn Name="Comment" Length="256" />
+            <nwsp:ListColumn Name="Comment1" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment2" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment3" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment4" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment5" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment6" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment7" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment8" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment9" Length="256" Visible="false" />
+          </nwsp:ListColumns>
+        </nwsp:List>
+        <nwsp:List Name="SequenceSoundSetList" SortKey="">
+          <nwsp:ListColumns>
+            <nwsp:ListColumn Name="Name" Length="128" />
+            <nwsp:ListColumn Name="Comment" Length="256" />
+            <nwsp:ListColumn Name="Comment1" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment2" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment3" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment4" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment5" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment6" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment7" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment8" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment9" Length="256" Visible="false" />
+          </nwsp:ListColumns>
+        </nwsp:List>
+        <nwsp:List Name="SequenceSoundSetItemList" SortKey="">
+          <nwsp:ListColumns>
+            <nwsp:ListColumn Name="SndEdit" Length="40" />
+            <nwsp:ListColumn Name="PreviewPlay" Length="32" />
+            <nwsp:ListColumn Name="Name" Length="128" />
+            <nwsp:ListColumn Name="SequenceSoundFileType" Length="68" />
+            <nwsp:ListColumn Name="FilePath" Length="96" />
+            <nwsp:ListColumn Name="StartPosition" Length="88" />
+            <nwsp:ListColumn Name="SoundSetBankReference0" Length="128" />
+            <nwsp:ListColumn Name="SoundSetBankReference1" Length="128" />
+            <nwsp:ListColumn Name="SoundSetBankReference2" Length="128" />
+            <nwsp:ListColumn Name="SoundSetBankReference3" Length="128" />
+            <nwsp:ListColumn Name="PlayerReference" Length="128" />
+            <nwsp:ListColumn Name="Volume" Length="48" />
+            <nwsp:ListColumn Name="IntegratedLoudness" Length="48" />
+            <nwsp:ListColumn Name="ChannelPriority" Length="58" />
+            <nwsp:ListColumn Name="PlayerPriority" Length="58" />
+            <nwsp:ListColumn Name="ActorPlayer" Length="58" />
+            <nwsp:ListColumn Name="SinglePlayType" Length="96" />
+            <nwsp:ListColumn Name="SinglePlayEffectiveDuration" Length="64" />
+            <nwsp:ListColumn Name="RemoteFilter" Length="48" Visible="false" />
+            <nwsp:ListColumn Name="ReleasePriorityFixed" Length="80" />
+            <nwsp:ListColumn Name="Sound3D/Enable3DVolume" Length="32" />
+            <nwsp:ListColumn Name="Sound3D/Enable3DPan" Length="32" />
+            <nwsp:ListColumn Name="Sound3D/Enable3DSurroundPan" Length="32" />
+            <nwsp:ListColumn Name="Sound3D/Enable3DPriority" Length="32" />
+            <nwsp:ListColumn Name="Sound3D/Enable3DFilter" Length="40" />
+            <nwsp:ListColumn Name="Sound3D/DecayCurve3D" Length="64" />
+            <nwsp:ListColumn Name="Sound3D/DecayRatio3D" Length="52" />
+            <nwsp:ListColumn Name="Sound3D/DopplerFactor3D" Length="96" />
+            <nwsp:ListColumn Name="FrontBypass" Length="85" Visible="false" />
+            <nwsp:ListColumn Name="MaximumVoiceCount" Length="32" />
+            <nwsp:ListColumn Name="UserParameter" Length="80" />
+            <nwsp:ListColumn Name="UserParameter1" Length="80" Visible="false" />
+            <nwsp:ListColumn Name="UserParameter2" Length="80" Visible="false" />
+            <nwsp:ListColumn Name="UserParameter3" Length="80" Visible="false" />
+            <nwsp:ListColumn Name="Comment" Length="256" />
+            <nwsp:ListColumn Name="Comment1" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment2" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment3" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment4" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment5" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment6" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment7" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment8" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment9" Length="256" Visible="false" />
+          </nwsp:ListColumns>
+        </nwsp:List>
+        <nwsp:List Name="SequenceSoundList" SortKey="">
+          <nwsp:ListColumns>
+            <nwsp:ListColumn Name="SndEdit" Length="40" />
+            <nwsp:ListColumn Name="PreviewPlay" Length="32" />
+            <nwsp:ListColumn Name="Name" Length="128" />
+            <nwsp:ListColumn Name="SequenceSoundFileType" Length="68" />
+            <nwsp:ListColumn Name="FilePath" Length="96" />
+            <nwsp:ListColumn Name="StartPosition" Length="88" />
+            <nwsp:ListColumn Name="SoundSetBankReference0" Length="128" />
+            <nwsp:ListColumn Name="SoundSetBankReference1" Length="128" />
+            <nwsp:ListColumn Name="SoundSetBankReference2" Length="128" />
+            <nwsp:ListColumn Name="SoundSetBankReference3" Length="128" />
+            <nwsp:ListColumn Name="PlayerReference" Length="128" />
+            <nwsp:ListColumn Name="Volume" Length="48" />
+            <nwsp:ListColumn Name="IntegratedLoudness" Length="48" />
+            <nwsp:ListColumn Name="ChannelPriority" Length="58" />
+            <nwsp:ListColumn Name="PlayerPriority" Length="58" />
+            <nwsp:ListColumn Name="ActorPlayer" Length="58" />
+            <nwsp:ListColumn Name="SinglePlayType" Length="96" />
+            <nwsp:ListColumn Name="SinglePlayEffectiveDuration" Length="64" />
+            <nwsp:ListColumn Name="RemoteFilter" Length="48" Visible="false" />
+            <nwsp:ListColumn Name="ReleasePriorityFixed" Length="80" />
+            <nwsp:ListColumn Name="Sound3D/Enable3DVolume" Length="32" />
+            <nwsp:ListColumn Name="Sound3D/Enable3DPan" Length="32" />
+            <nwsp:ListColumn Name="Sound3D/Enable3DSurroundPan" Length="32" />
+            <nwsp:ListColumn Name="Sound3D/Enable3DPriority" Length="32" />
+            <nwsp:ListColumn Name="Sound3D/Enable3DFilter" Length="40" />
+            <nwsp:ListColumn Name="Sound3D/DecayCurve3D" Length="64" />
+            <nwsp:ListColumn Name="Sound3D/DecayRatio3D" Length="52" />
+            <nwsp:ListColumn Name="Sound3D/DopplerFactor3D" Length="96" />
+            <nwsp:ListColumn Name="FrontBypass" Length="85" Visible="false" />
+            <nwsp:ListColumn Name="MaximumVoiceCount" Length="32" />
+            <nwsp:ListColumn Name="UserParameter" Length="80" />
+            <nwsp:ListColumn Name="UserParameter1" Length="80" Visible="false" />
+            <nwsp:ListColumn Name="UserParameter2" Length="80" Visible="false" />
+            <nwsp:ListColumn Name="UserParameter3" Length="80" Visible="false" />
+            <nwsp:ListColumn Name="Comment" Length="256" />
+            <nwsp:ListColumn Name="Comment1" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment2" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment3" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment4" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment5" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment6" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment7" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment8" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment9" Length="256" Visible="false" />
+          </nwsp:ListColumns>
+        </nwsp:List>
+        <nwsp:List Name="BankList" SortKey="">
+          <nwsp:ListColumns>
+            <nwsp:ListColumn Name="SndEdit" Length="40" />
+            <nwsp:ListColumn Name="Name" Length="128" />
+            <nwsp:ListColumn Name="WaveArchiveReference" Length="80" />
+            <nwsp:ListColumn Name="FilePath" Length="96" />
+            <nwsp:ListColumn Name="DataSize" Length="70" />
+            <nwsp:ListColumn Name="Comment" Length="256" />
+            <nwsp:ListColumn Name="Comment1" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment2" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment3" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment4" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment5" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment6" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment7" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment8" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment9" Length="256" Visible="false" />
+          </nwsp:ListColumns>
+        </nwsp:List>
+        <nwsp:List Name="WaveArchiveList" SortKey="">
+          <nwsp:ListColumns>
+            <nwsp:ListColumn Name="Name" Length="128" />
+            <nwsp:ListColumn Name="WaveArchiveLoadType" Length="64" />
+            <nwsp:ListColumn Name="Comment" Length="256" />
+            <nwsp:ListColumn Name="Comment1" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment2" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment3" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment4" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment5" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment6" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment7" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment8" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment9" Length="256" Visible="false" />
+          </nwsp:ListColumns>
+        </nwsp:List>
+        <nwsp:List Name="PlayerList" SortKey="">
+          <nwsp:ListColumns>
+            <nwsp:ListColumn Name="Name" Length="128" />
+            <nwsp:ListColumn Name="PlayerSoundLimit" Length="80" />
+            <nwsp:ListColumn Name="PlayerHeapSize" Length="64" />
+            <nwsp:ListColumn Name="Comment" Length="256" />
+            <nwsp:ListColumn Name="Comment1" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment2" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment3" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment4" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment5" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment6" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment7" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment8" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment9" Length="256" Visible="false" />
+          </nwsp:ListColumns>
+        </nwsp:List>
+        <nwsp:List Name="GroupList" SortKey="">
+          <nwsp:ListColumns>
+            <nwsp:ListColumn Name="Name" Length="128" />
+            <nwsp:ListColumn Name="DataSize" Length="70" />
+            <nwsp:ListColumn Name="GroupOutputType" Length="72" />
+            <nwsp:ListColumn Name="Comment" Length="256" />
+            <nwsp:ListColumn Name="Comment1" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment2" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment3" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment4" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment5" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment6" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment7" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment8" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment9" Length="256" Visible="false" />
+          </nwsp:ListColumns>
+        </nwsp:List>
+        <nwsp:List Name="GroupItemList" SortKey="">
+          <nwsp:ListColumns>
+            <nwsp:ListColumn Name="TargetItemReference" Length="128" />
+            <nwsp:ListColumn Name="GroupItemTargetSoundSet" Length="128" />
+            <nwsp:ListColumn Name="GroupItemRegisterType" Length="160" />
+            <nwsp:ListColumn Name="Comment" Length="256" />
+            <nwsp:ListColumn Name="Comment1" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment2" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment3" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment4" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment5" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment6" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment7" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment8" Length="256" Visible="false" />
+            <nwsp:ListColumn Name="Comment9" Length="256" Visible="false" />
+          </nwsp:ListColumns>
+        </nwsp:List>
+        <nwsp:List Name="MultipleBankList" SortKey="">
+          <nwsp:ListColumns>
+            <nwsp:ListColumn Name="SoundSetBankReferences" Length="128" />
+          </nwsp:ListColumns>
+        </nwsp:List>
+      </nwsp:Lists>
+    </nwsp:SoundSetDocumentView>
+  </nwsp:DocumentViews>
+  <nwsp:Output>
+    <nwsp:HtmlInstrumentList>
+      <nwsp:Lists>
+        <nwsp:List Name="HtmlInstrumentList">
+          <nwsp:ListColumns>
+            <nwsp:ListColumn Name="ItemIndex" />
+            <nwsp:ListColumn Name="ProgramNo" />
+            <nwsp:ListColumn Name="Name" />
+            <nwsp:ListColumn Name="WaveEncoding" />
+            <nwsp:ListColumn Name="FileName" />
+            <nwsp:ListColumn Name="WaveTime" />
+            <nwsp:ListColumn Name="WaveTick" />
+            <nwsp:ListColumn Name="SampleRate" />
+            <nwsp:ListColumn Name="WaveBitRate" />
+            <nwsp:ListColumn Name="WaveSampleBit" />
+            <nwsp:ListColumn Name="OriginalKey" />
+            <nwsp:ListColumn Name="Envelope/Attack" />
+            <nwsp:ListColumn Name="Envelope/Hold" />
+            <nwsp:ListColumn Name="Envelope/Decay" />
+            <nwsp:ListColumn Name="Envelope/Sustain" />
+            <nwsp:ListColumn Name="Envelope/Release" />
+            <nwsp:ListColumn Name="Volume" />
+            <nwsp:ListColumn Name="PitchSemitones" />
+            <nwsp:ListColumn Name="PitchCents" />
+            <nwsp:ListColumn Name="InterpolationType" />
+            <nwsp:ListColumn Name="Comment" />
+          </nwsp:ListColumns>
+        </nwsp:List>
+      </nwsp:Lists>
+    </nwsp:HtmlInstrumentList>
+  </nwsp:Output>
+  <nwsp:Convert>
+    <nwsp:SelectedReconvert>
+      <nwsp:StreamSound>true</nwsp:StreamSound>
+      <nwsp:WaveSoundSet>true</nwsp:WaveSoundSet>
+      <nwsp:SequenceSound>true</nwsp:SequenceSound>
+      <nwsp:Bank>true</nwsp:Bank>
+    </nwsp:SelectedReconvert>
+  </nwsp:Convert>
+  <nwsu:Uris>
+    <nwsu:Uri Name="SoundProjectInitialFilePath" />
+    <nwsu:Uri Name="SoundSetInitialFilePath" />
+    <nwsu:Uri Name="BankInitialFilePath" />
+    <nwsu:Uri Name="SequenceInitialFilePath" />
+    <nwsu:Uri Name="WaveInitialFilePath" Value="C:\work\05dev\SoundMakerProject\asset\SE" />
+  </nwsu:Uris>
+  <nwsp:SoundProjectConfiguration>
+    <nwsp:HistoryList>
+      <nwsp:Bookmarks Name="履歴" Type="Folder" Expanded="false">
+        <nwsp:Bookmarks Name="SoundData/ウェーブサウンドセット/WSDSET_0" SoundSetName="SoundData" Type="WaveSoundSet" TargetName="WSDSET_0" DateTime="638878444200000000" />
+        <nwsp:Bookmarks Name="SoundData/ストリームサウンド" SoundSetName="SoundData" Type="StreamSoundPack" DateTime="638878444200000000" />
+        <nwsp:Bookmarks Name="SoundData/ウェーブサウンドセット/WSDSET_0" SoundSetName="SoundData" Type="WaveSoundSet" TargetName="WSDSET_0" DateTime="638878443600000000" />
+        <nwsp:Bookmarks Name="SoundData/ストリームサウンド" SoundSetName="SoundData" Type="StreamSoundPack" DateTime="638878443600000000" />
+        <nwsp:Bookmarks Name="SoundData/ウェーブサウンドセット/WSDSET_0" SoundSetName="SoundData" Type="WaveSoundSet" TargetName="WSDSET_0" DateTime="638878377600000000" />
+        <nwsp:Bookmarks Name="SoundData/ストリームサウンド" SoundSetName="SoundData" Type="StreamSoundPack" DateTime="638878375800000000" />
+        <nwsp:Bookmarks Name="SoundData/ウェーブサウンドセット/WSDSET_0" SoundSetName="SoundData" Type="WaveSoundSet" TargetName="WSDSET_0" DateTime="638878368000000000" />
+        <nwsp:Bookmarks Name="SoundData/ウェーブサウンドセット" SoundSetName="SoundData" Type="WaveSoundSetPack" DateTime="638878368000000000" />
+        <nwsp:Bookmarks Name="SoundData/ウェーブサウンドセット/WSDSET_0" SoundSetName="SoundData" Type="WaveSoundSet" TargetName="WSDSET_0" DateTime="638878368000000000" />
+        <nwsp:Bookmarks Name="SoundData/ウェーブサウンドセット" SoundSetName="SoundData" Type="WaveSoundSetPack" DateTime="638878367400000000" />
+        <nwsp:Bookmarks Name="SoundData/ストリームサウンド" SoundSetName="SoundData" Type="StreamSoundPack" DateTime="638878364400000000" />
+        <nwsp:Bookmarks Name="SoundData/プレイヤー" SoundSetName="SoundData" Type="PlayerPack" DateTime="638878362600000000" />
+        <nwsp:Bookmarks Name="SoundData/ウェーブサウンドセット/WSDSET_0" SoundSetName="SoundData" Type="WaveSoundSet" TargetName="WSDSET_0" DateTime="638875720800000000" />
+        <nwsp:Bookmarks Name="SoundData/ウェーブサウンドセット" SoundSetName="SoundData" Type="WaveSoundSetPack" DateTime="638875720800000000" />
+        <nwsp:Bookmarks Name="SoundData/ストリームサウンド" SoundSetName="SoundData" Type="StreamSoundPack" DateTime="638875720800000000" />
+        <nwsp:Bookmarks Name="SoundData/プレイヤー" SoundSetName="SoundData" Type="PlayerPack" DateTime="638875717800000000" />
+      </nwsp:Bookmarks>
+    </nwsp:HistoryList>
+    <nwsp:SndEditList />
+    <nwsp:FindResultView />
+    <nwsp:Connection>
+      <nwsp:Platform />
+      <nwsp:ConnectionTarget />
+    </nwsp:Connection>
+  </nwsp:SoundProjectConfiguration>
+  <nwrsp:PreviewCommon>
+    <nwrsp:System>
+      <nwrsp:OutputMode>Stereo</nwrsp:OutputMode>
+      <nwrsp:DrcOutputMode>Stereo</nwrsp:DrcOutputMode>
+    </nwrsp:System>
+    <nwrsp:SequenceVariable>
+      <nwrsp:SequenceVariableAutoSync>true</nwrsp:SequenceVariableAutoSync>
+      <nwrsp:SequenceVariableAutoSyncInterval>500</nwrsp:SequenceVariableAutoSyncInterval>
+    </nwrsp:SequenceVariable>
+    <nwrsp:OutputWaveFile>
+      <nwrsp:MaxDuration>30</nwrsp:MaxDuration>
+      <nwrsp:OpenDestinationFolder>true</nwrsp:OpenDestinationFolder>
+      <nwrsp:IsMonaural>false</nwrsp:IsMonaural>
+      <nwrsp:SamplingRate>k48KHz</nwrsp:SamplingRate>
+    </nwrsp:OutputWaveFile>
+  </nwrsp:PreviewCommon>
+  <nwspc:SoundProjectConfigurationCommon />
+</SoundProjectConfiguration>

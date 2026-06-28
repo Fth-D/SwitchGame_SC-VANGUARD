@@ -1,0 +1,433 @@
+<?xml version="1.0"?>
+<SoundSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.2.0.0" Platform="Any" xmlns="NintendoWare.SoundFoundation.FileFormats.NintendoWare">
+  <Head>
+    <Title>TestSoundSet</Title>
+  </Head>
+  <Body>
+    <SoundSet>
+      <Items>
+        <SoundSetItemFolder Name="@StreamSounds">
+          <Parameters>
+            <Comment />
+            <Comment1 />
+            <Comment2 />
+            <Comment3 />
+            <Comment4 />
+            <Comment5 />
+            <Comment6 />
+            <Comment7 />
+            <Comment8 />
+            <Comment9 />
+            <ColorIndex>0</ColorIndex>
+            <IsEnabled>True</IsEnabled>
+          </Parameters>
+          <Items>
+            <StreamSound Name="TITLE_BGM">
+              <Parameters>
+                <Comment />
+                <Comment1 />
+                <Comment2 />
+                <Comment3 />
+                <Comment4 />
+                <Comment5 />
+                <Comment6 />
+                <Comment7 />
+                <Comment8 />
+                <Comment9 />
+                <ColorIndex>0</ColorIndex>
+                <IsEnabled>True</IsEnabled>
+                <RemoteFilter>0</RemoteFilter>
+                <Volume>96</Volume>
+                <PlayerPriority>64</PlayerPriority>
+                <PlayerReference Target="BGM_01" />
+                <ActorPlayer>0</ActorPlayer>
+                <UserParameter>0</UserParameter>
+                <UserParameter1>0</UserParameter1>
+                <UserParameter2>0</UserParameter2>
+                <UserParameter3>0</UserParameter3>
+                <Sound3D>
+                  <Parameters>
+                    <DecayCurve3D>Log</DecayCurve3D>
+                    <DecayRatio3D>0.5</DecayRatio3D>
+                    <DopplerFactor3D>0</DopplerFactor3D>
+                    <Enable3DVolume>True</Enable3DVolume>
+                    <Enable3DPan>True</Enable3DPan>
+                    <Enable3DSurroundPan>True</Enable3DSurroundPan>
+                    <Enable3DPriority>True</Enable3DPriority>
+                    <Enable3DFilter>False</Enable3DFilter>
+                  </Parameters>
+                </Sound3D>
+                <SinglePlayType>None</SinglePlayType>
+                <SinglePlayEffectiveDuration>0</SinglePlayEffectiveDuration>
+                <WaveEncoding>Adpcm</WaveEncoding>
+                <IsPrefetchEnabled>False</IsPrefetchEnabled>
+                <IsResampleEnabled>False</IsResampleEnabled>
+                <SampleRate>0</SampleRate>
+                <IsDownMixEnabled>False</IsDownMixEnabled>
+                <PanMode>Balance</PanMode>
+                <PanCurve>Sqrt(-3dB)</PanCurve>
+                <Pitch>1</Pitch>
+                <Sends>
+                  <Send Name="AuxCSend">0</Send>
+                  <Send Name="MainSend">127</Send>
+                  <Send Name="AuxASend">0</Send>
+                  <Send Name="AuxBSend">0</Send>
+                </Sends>
+              </Parameters>
+              <Items>
+                <StreamSoundTrack>
+                  <Parameters>
+                    <Comment />
+                    <Comment1 />
+                    <Comment2 />
+                    <Comment3 />
+                    <Comment4 />
+                    <Comment5 />
+                    <Comment6 />
+                    <Comment7 />
+                    <Comment8 />
+                    <Comment9 />
+                    <ColorIndex>0</ColorIndex>
+                    <IsEnabled>True</IsEnabled>
+                    <FilePath>asset/BGM/sample000.wav</FilePath>
+                    <Volume>127</Volume>
+                    <Pan>64</Pan>
+                    <SurroundPan>0</SurroundPan>
+                    <FrontBypass>False</FrontBypass>
+                    <LPF>64</LPF>
+                    <BiquadType>None</BiquadType>
+                    <Biquad>0</Biquad>
+                    <Sends>
+                      <Send Name="AuxCSend">0</Send>
+                      <Send Name="MainSend">127</Send>
+                      <Send Name="AuxASend">0</Send>
+                      <Send Name="AuxBSend">0</Send>
+                    </Sends>
+                  </Parameters>
+                </StreamSoundTrack>
+              </Items>
+            </StreamSound>
+            <StreamSound Name="GAME_BGM">
+              <Parameters>
+                <Comment />
+                <Comment1 />
+                <Comment2 />
+                <Comment3 />
+                <Comment4 />
+                <Comment5 />
+                <Comment6 />
+                <Comment7 />
+                <Comment8 />
+                <Comment9 />
+                <ColorIndex>0</ColorIndex>
+                <IsEnabled>True</IsEnabled>
+                <RemoteFilter>0</RemoteFilter>
+                <Volume>96</Volume>
+                <PlayerPriority>64</PlayerPriority>
+                <PlayerReference Target="BGM_01" />
+                <ActorPlayer>0</ActorPlayer>
+                <UserParameter>0</UserParameter>
+                <UserParameter1>0</UserParameter1>
+                <UserParameter2>0</UserParameter2>
+                <UserParameter3>0</UserParameter3>
+                <Sound3D>
+                  <Parameters>
+                    <DecayCurve3D>Log</DecayCurve3D>
+                    <DecayRatio3D>0.5</DecayRatio3D>
+                    <DopplerFactor3D>0</DopplerFactor3D>
+                    <Enable3DVolume>True</Enable3DVolume>
+                    <Enable3DPan>True</Enable3DPan>
+                    <Enable3DSurroundPan>True</Enable3DSurroundPan>
+                    <Enable3DPriority>True</Enable3DPriority>
+                    <Enable3DFilter>False</Enable3DFilter>
+                  </Parameters>
+                </Sound3D>
+                <SinglePlayType>None</SinglePlayType>
+                <SinglePlayEffectiveDuration>0</SinglePlayEffectiveDuration>
+                <WaveEncoding>Adpcm</WaveEncoding>
+                <IsPrefetchEnabled>False</IsPrefetchEnabled>
+                <IsResampleEnabled>False</IsResampleEnabled>
+                <SampleRate>0</SampleRate>
+                <IsDownMixEnabled>False</IsDownMixEnabled>
+                <PanMode>Balance</PanMode>
+                <PanCurve>Sqrt(-3dB)</PanCurve>
+                <Pitch>1</Pitch>
+                <Sends>
+                  <Send Name="AuxCSend">0</Send>
+                  <Send Name="MainSend">127</Send>
+                  <Send Name="AuxASend">0</Send>
+                  <Send Name="AuxBSend">0</Send>
+                </Sends>
+              </Parameters>
+              <Items>
+                <StreamSoundTrack>
+                  <Parameters>
+                    <Comment />
+                    <Comment1 />
+                    <Comment2 />
+                    <Comment3 />
+                    <Comment4 />
+                    <Comment5 />
+                    <Comment6 />
+                    <Comment7 />
+                    <Comment8 />
+                    <Comment9 />
+                    <ColorIndex>0</ColorIndex>
+                    <IsEnabled>True</IsEnabled>
+                    <FilePath>asset/BGM/sample001.wav</FilePath>
+                    <Volume>127</Volume>
+                    <Pan>64</Pan>
+                    <SurroundPan>0</SurroundPan>
+                    <FrontBypass>False</FrontBypass>
+                    <LPF>64</LPF>
+                    <BiquadType>None</BiquadType>
+                    <Biquad>0</Biquad>
+                    <Sends>
+                      <Send Name="AuxCSend">0</Send>
+                      <Send Name="MainSend">127</Send>
+                      <Send Name="AuxASend">0</Send>
+                      <Send Name="AuxBSend">0</Send>
+                    </Sends>
+                  </Parameters>
+                </StreamSoundTrack>
+              </Items>
+            </StreamSound>
+          </Items>
+        </SoundSetItemFolder>
+        <SoundSetItemFolder Name="@WaveSoundSets">
+          <Parameters>
+            <Comment />
+            <Comment1 />
+            <Comment2 />
+            <Comment3 />
+            <Comment4 />
+            <Comment5 />
+            <Comment6 />
+            <Comment7 />
+            <Comment8 />
+            <Comment9 />
+            <ColorIndex>0</ColorIndex>
+            <IsEnabled>True</IsEnabled>
+          </Parameters>
+          <Items>
+            <WaveSoundSet Name="WSDSET_0">
+              <Parameters>
+                <Comment />
+                <Comment1 />
+                <Comment2 />
+                <Comment3 />
+                <Comment4 />
+                <Comment5 />
+                <Comment6 />
+                <Comment7 />
+                <Comment8 />
+                <Comment9 />
+                <ColorIndex>0</ColorIndex>
+                <IsEnabled>True</IsEnabled>
+                <WaveArchiveReference Target="(AutoShared)" />
+              </Parameters>
+              <Items>
+                <WaveSound Name="SE_HIT">
+                  <Parameters>
+                    <Comment />
+                    <Comment1 />
+                    <Comment2 />
+                    <Comment3 />
+                    <Comment4 />
+                    <Comment5 />
+                    <Comment6 />
+                    <Comment7 />
+                    <Comment8 />
+                    <Comment9 />
+                    <ColorIndex>0</ColorIndex>
+                    <IsEnabled>True</IsEnabled>
+                    <FilePath>asset/SE/hit0.wav</FilePath>
+                    <Volume>96</Volume>
+                    <PlayerPriority>64</PlayerPriority>
+                    <PlayerReference Target="SE_01" />
+                    <ActorPlayer>0</ActorPlayer>
+                    <UserParameter>0</UserParameter>
+                    <UserParameter1>0</UserParameter1>
+                    <UserParameter2>0</UserParameter2>
+                    <UserParameter3>0</UserParameter3>
+                    <Sound3D>
+                      <Parameters>
+                        <DecayCurve3D>Log</DecayCurve3D>
+                        <DecayRatio3D>0.5</DecayRatio3D>
+                        <DopplerFactor3D>0</DopplerFactor3D>
+                        <Enable3DVolume>True</Enable3DVolume>
+                        <Enable3DPan>True</Enable3DPan>
+                        <Enable3DSurroundPan>True</Enable3DSurroundPan>
+                        <Enable3DPriority>True</Enable3DPriority>
+                        <Enable3DFilter>False</Enable3DFilter>
+                      </Parameters>
+                    </Sound3D>
+                    <SinglePlayType>None</SinglePlayType>
+                    <SinglePlayEffectiveDuration>0</SinglePlayEffectiveDuration>
+                    <WaveEncoding>Adpcm</WaveEncoding>
+                    <IsResampleEnabled>False</IsResampleEnabled>
+                    <SampleRate>0</SampleRate>
+                    <IsDownMixEnabled>False</IsDownMixEnabled>
+                    <ChannelPriority>64</ChannelPriority>
+                    <Pan>64</Pan>
+                    <SurroundPan>0</SurroundPan>
+                    <Pitch>1</Pitch>
+                    <EnvelopeRelease>127</EnvelopeRelease>
+                    <ReleasePriorityFixed>False</ReleasePriorityFixed>
+                    <PanMode>Dual</PanMode>
+                    <PanCurve>Sqrt(-3dB)</PanCurve>
+                    <FrontBypass>False</FrontBypass>
+                    <LPF>64</LPF>
+                    <BiquadType>None</BiquadType>
+                    <Biquad>0</Biquad>
+                    <RemoteFilter>0</RemoteFilter>
+                    <Sends>
+                      <Send Name="AuxCSend">0</Send>
+                      <Send Name="MainSend">127</Send>
+                      <Send Name="AuxASend">0</Send>
+                      <Send Name="AuxBSend">0</Send>
+                    </Sends>
+                  </Parameters>
+                </WaveSound>
+              </Items>
+            </WaveSoundSet>
+          </Items>
+        </SoundSetItemFolder>
+        <SoundSetItemFolder Name="@SequenceSounds">
+          <Parameters>
+            <Comment />
+            <Comment1 />
+            <Comment2 />
+            <Comment3 />
+            <Comment4 />
+            <Comment5 />
+            <Comment6 />
+            <Comment7 />
+            <Comment8 />
+            <Comment9 />
+            <ColorIndex>0</ColorIndex>
+            <IsEnabled>True</IsEnabled>
+          </Parameters>
+        </SoundSetItemFolder>
+        <SoundSetItemFolder Name="@SequenceSoundSets">
+          <Parameters>
+            <Comment />
+            <Comment1 />
+            <Comment2 />
+            <Comment3 />
+            <Comment4 />
+            <Comment5 />
+            <Comment6 />
+            <Comment7 />
+            <Comment8 />
+            <Comment9 />
+            <ColorIndex>0</ColorIndex>
+            <IsEnabled>True</IsEnabled>
+          </Parameters>
+        </SoundSetItemFolder>
+        <SoundSetItemFolder Name="@SoundSetBanks">
+          <Parameters>
+            <Comment />
+            <Comment1 />
+            <Comment2 />
+            <Comment3 />
+            <Comment4 />
+            <Comment5 />
+            <Comment6 />
+            <Comment7 />
+            <Comment8 />
+            <Comment9 />
+            <ColorIndex>0</ColorIndex>
+            <IsEnabled>True</IsEnabled>
+          </Parameters>
+        </SoundSetItemFolder>
+        <SoundSetItemFolder Name="@WaveArchives">
+          <Parameters>
+            <Comment />
+            <Comment1 />
+            <Comment2 />
+            <Comment3 />
+            <Comment4 />
+            <Comment5 />
+            <Comment6 />
+            <Comment7 />
+            <Comment8 />
+            <Comment9 />
+            <ColorIndex>0</ColorIndex>
+            <IsEnabled>True</IsEnabled>
+          </Parameters>
+        </SoundSetItemFolder>
+        <SoundSetItemFolder Name="@Groups">
+          <Parameters>
+            <Comment />
+            <Comment1 />
+            <Comment2 />
+            <Comment3 />
+            <Comment4 />
+            <Comment5 />
+            <Comment6 />
+            <Comment7 />
+            <Comment8 />
+            <Comment9 />
+            <ColorIndex>0</ColorIndex>
+            <IsEnabled>True</IsEnabled>
+          </Parameters>
+        </SoundSetItemFolder>
+        <SoundSetItemFolder Name="@Players">
+          <Parameters>
+            <Comment />
+            <Comment1 />
+            <Comment2 />
+            <Comment3 />
+            <Comment4 />
+            <Comment5 />
+            <Comment6 />
+            <Comment7 />
+            <Comment8 />
+            <Comment9 />
+            <ColorIndex>0</ColorIndex>
+            <IsEnabled>True</IsEnabled>
+          </Parameters>
+          <Items>
+            <Player Name="BGM_01">
+              <Parameters>
+                <Comment />
+                <Comment1 />
+                <Comment2 />
+                <Comment3 />
+                <Comment4 />
+                <Comment5 />
+                <Comment6 />
+                <Comment7 />
+                <Comment8 />
+                <Comment9 />
+                <ColorIndex>0</ColorIndex>
+                <IsEnabled>True</IsEnabled>
+                <PlayerSoundLimit>3</PlayerSoundLimit>
+                <PlayerHeapSize>0</PlayerHeapSize>
+              </Parameters>
+            </Player>
+            <Player Name="SE_01">
+              <Parameters>
+                <Comment />
+                <Comment1 />
+                <Comment2 />
+                <Comment3 />
+                <Comment4 />
+                <Comment5 />
+                <Comment6 />
+                <Comment7 />
+                <Comment8 />
+                <Comment9 />
+                <ColorIndex>0</ColorIndex>
+                <IsEnabled>True</IsEnabled>
+                <PlayerSoundLimit>4</PlayerSoundLimit>
+                <PlayerHeapSize>0</PlayerHeapSize>
+              </Parameters>
+            </Player>
+          </Items>
+        </SoundSetItemFolder>
+      </Items>
+    </SoundSet>
+  </Body>
+</SoundSet>

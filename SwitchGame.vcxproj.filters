@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="ビルド">
+      <UniqueIdentifier>{F1DF9757-14C3-43FA-8525-6665FEDE7BA5}</UniqueIdentifier>
+      <Extensions>props</Extensions>
+    </Filter>
+    <Filter Include="ソース ファイル\2DAnimation">
+      <UniqueIdentifier>{5ab05850-5976-4377-a6ab-a59397f6f769}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\2DAnimation">
+      <UniqueIdentifier>{da1d22db-45cb-428f-948b-64691c7e86f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Object">
+      <UniqueIdentifier>{c0d99b69-f228-4e95-9a14-80ca357e3e17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Object">
+      <UniqueIdentifier>{b2ff0e7c-d612-4134-9b0d-950791654097}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Game">
+      <UniqueIdentifier>{e2937fa3-acf7-4ec5-b325-82b0e88372f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Scene">
+      <UniqueIdentifier>{579890e0-4e21-407d-bf3e-867a4d3de05e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Scene">
+      <UniqueIdentifier>{f203506b-807e-496d-beb7-87b1ebbb8ac1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Camera">
+      <UniqueIdentifier>{86e99877-0a42-48aa-9034-aab0817f79dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Game">
+      <UniqueIdentifier>{5486358a-a1c2-4ac4-8964-bdc489c96442}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\System">
+      <UniqueIdentifier>{07640363-a13c-4345-90c1-26b0028c9086}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Util">
+      <UniqueIdentifier>{dfe0cef2-310e-4725-a4ac-839050048dec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Camera">
+      <UniqueIdentifier>{a2b66c79-6f74-42bc-9339-3fd101185a13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Util">
+      <UniqueIdentifier>{63599034-c4bf-4af4-b24e-432f2d8508aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\System">
+      <UniqueIdentifier>{7110746e-c4d8-4edc-8fdc-faaa6fcdaf47}</UniqueIdentifier>
+    </Filter>
+      <Filter Include="ソース ファイル\Platform">
+      <UniqueIdentifier>{94694e0f-6192-4eb2-bc6e-60a9be7f0b45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Platform\Switch">
+      <UniqueIdentifier>{dcb8cb1b-cb27-4c03-98f5-b8f7003afe4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Platform\Win64">
+      <UniqueIdentifier>{8becdd45-f325-49e6-b1c0-c22136144950}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Platform\OpenGL">
+      <UniqueIdentifier>{92932962-46b0-4b1b-b4c8-b049f8e7e86b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Platform\DX11">
+      <UniqueIdentifier>{e3bba06f-eacc-488d-80b7-81203721599c}</UniqueIdentifier>
+    </Filter>
+</ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GameObject.h">
+      <Filter>ヘッダー ファイル\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>ヘッダー ファイル\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>ヘッダー ファイル\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="GameAPI.h">
+      <Filter>ヘッダー ファイル\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Animation.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\AnimationCell.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Camera.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\CameraAPI.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Collision.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\controller.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\GraphicsHelper.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Input.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\main.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\MathUtil.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Particle.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Log.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Polygon.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\PrimitiveRender.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\sound.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\SpriteSheet.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\system.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Renderer.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Text.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\texture.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\GameTime.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Platform\PlatformDefines.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Platform\PlatformTypes.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Application.arm.ilp32.nmeta" />
+    <CustomBuild Include="Application.aarch64.lp64.nmeta" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>ソース ファイル\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="GameOverScene.cpp">
+      <Filter>ソース ファイル\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>ソース ファイル\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="GameAPI.cpp">
+      <Filter>ソース ファイル\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleScene.cpp">
+      <Filter>ソース ファイル\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="ResultScene.cpp">
+      <Filter>ソース ファイル\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="GameScene.cpp">
+      <Filter>ソース ファイル\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Animation.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\AnimationCell.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Camera.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\CameraAPI.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Collision.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Input.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Particle.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Log.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Polygon.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\PrimitiveRender.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Renderer.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\SpriteSheet.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Text.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\GameTime.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="SampleScene.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Platform\OpenGL\system.Win64.cpp">
+      <Filter>ソース ファイル\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Platform\OpenGL\GraphicsHelper.Win64.cpp">
+      <Filter>ソース ファイル\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Platform\Win64\controller.Win64.cpp">
+      <Filter>ソース ファイル\Platform\Win64</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Platform\Win64\sound.Win64.cpp">
+      <Filter>ソース ファイル\Platform\Win64</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Platform\OpenGL\texture.Win64.cpp">
+      <Filter>ソース ファイル\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\ThirdParty\glad\src\glad.c">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Platform\DX11\Renderer.DX11.cpp">
+      <Filter>ソース ファイル\Platform\DX11</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Platform\DX11\GraphicsHelper.Win64.DX11.cpp">
+      <Filter>ソース ファイル\Platform\DX11</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Platform\DX11\system.Win64.DX11.cpp">
+      <Filter>ソース ファイル\Platform\DX11</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Platform\DX11\texture.Win64.DX11.cpp">
+      <Filter>ソース ファイル\Platform\DX11</Filter>
+    </ClCompile>
+      <ClCompile Include="Framework\Platform\Switch\system.Nx.cpp">
+      <Filter>ソース ファイル\Platform\Switch</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Platform\Switch\GraphicsHelper.Nx.cpp">
+      <Filter>ソース ファイル\Platform\Switch</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Platform\Switch\controller.Nx.cpp">
+      <Filter>ソース ファイル\Platform\Switch</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Platform\Switch\sound.Nx.cpp">
+      <Filter>ソース ファイル\Platform\Switch</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Platform\Switch\texture.Nx.cpp">
+      <Filter>ソース ファイル\Platform\Switch</Filter>
+    </ClCompile>
+</ItemGroup>
+</Project>

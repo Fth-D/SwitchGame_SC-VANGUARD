@@ -1,0 +1,509 @@
+﻿## デフォルト値の設定
+
+## ストリームサウンド
+StreamSound:
+#  # コメント
+#  Comment: ""
+#  # コメント1
+#  Comment1: ""
+#  # コメント2
+#  Comment2: ""
+#  # コメント3
+#  Comment3: ""
+#  # コメント4
+#  Comment4: ""
+#  # コメント5
+#  Comment5: ""
+#  # コメント6
+#  Comment6: ""
+#  # コメント7
+#  Comment7: ""
+#  # コメント8
+#  Comment8: ""
+#  # コメント9
+#  Comment9: ""
+#  # アイテムカラー None, Red, Orange, Yellow, Green, Cyan, Blue, Purple, Pink のいずれかを指定します。
+#  Color: None
+#  # 音量
+#  Volume: 96
+#  # プレイヤー優先度
+#  PlayerPriority: 64
+#  # プレイヤー、プレイヤー名を指定します。
+#  Player: DEFAULT_PLAYER
+#  # アクタープレイヤー
+#  ActorPlayer: 0
+#  # ユーザーパラメータ
+#  UserParameter: 0
+#  # ユーザーパラメータ1
+#  UserParameter1: 0
+#  # ユーザーパラメータ2
+#  UserParameter2: 0
+#  # ユーザーパラメータ3
+#  UserParameter3: 0
+#  # 3D 減衰カーブ、Log（対数）, Linear（リニア） のいずれかを指定します。
+#  DecayCurve3D: Log
+#  # 3D 減衰率
+#  DecayRatio3D: 0.5
+#  # 3D ドップラーファクター
+#  DopplerFactor3D: 0
+#  # 3D Vol の有効、True（有効）, False（無効）のいずれかを指定します。
+#  3DVolume: True
+#  # 3D Pan の有効、True（有効）, False（無効）のいずれかを指定します。
+#  3DPan: True
+#  # 3D Span の有効、True（有効）, False（無効）のいずれかを指定します。
+#  3DSurroundPan: True
+#  # 3D Pri の有効、True（有効）, False（無効）のいずれかを指定します。
+#  3DPriority: True
+#  # 3D Filter の有効、True（有効）, False（無効）のいずれかを指定します。
+#  3DFilter: False
+#  # 圧縮方式、Adpcm, PCM16 のいずれかを指定します。
+#  WaveEncoding: Adpcm
+#  # プリフェッチの有効、True（有効）, False（無効）のいずれかを指定します。
+#  Prefetch: False
+#  # パンモード、Dual（デュアル）, Balance（バランス）のいずれかを指定します。
+#  PanMode: Balance
+#  # パンカーブ、Sqrt(-3dB), Sqrt(0dB), Sqrt(0dB,clamp), SinCos(-3dB), SinCos(0dB), SinCos(0dB,clamp), Linear(-6dB), Linear(0dB), Linear(0dB,clamp) のいずれかを指定します。
+#  PanCurve: Sqrt(-3dB)
+#  # ピッチ
+#  Pitch: 1
+#  # センド MAIN
+#  MainSend: 127
+#  # センド AUX_A
+#  AuxASend: 0
+#  # センド AUX_B
+#  AuxBSend: 0
+#  # センド AUX_C
+#  AuxCSend: 0
+
+##ストリームサウンドトラック
+StreamSoundTrack:
+#  # コメント
+#  Comment: ""
+#  # コメント1
+#  Comment1: ""
+#  # コメント2
+#  Comment2: ""
+#  # コメント3
+#  Comment3: ""
+#  # コメント4
+#  Comment4: ""
+#  # コメント5
+#  Comment5: ""
+#  # コメント6
+#  Comment6: ""
+#  # コメント7
+#  Comment7: ""
+#  # コメント8
+#  Comment8: ""
+#  # コメント9
+#  Comment9: ""
+#  # アイテムカラー None, Red, Orange, Yellow, Green, Cyan, Blue, Purple, Pink のいずれかを指定します。
+#  Color: None
+#  # 音量
+#  Volume: 127
+#  # パン
+#  Pan: 64
+#  # S パン
+#  SurroundPan: 0
+#  # LPF
+#  LPF: 64
+#  # Biquadフィルタの種類、None（使用しない）, LPF, HPF, BPF512（BPF 512Hz）, BPF1024（BPF 1024Hz）, BPF2048（BPF 2048Hz）, USR0~USR63（ユーザー定義0~63）のいずれかを指定します。
+#  BiquadType: None
+#  # biquad フィルタ値
+#  Biquad: 0
+#  # センド MAIN
+#  MainSend: 127
+#  # センド AUX_A
+#  AuxASend: 0
+#  # センド AUX_B
+#  AuxBSend: 0
+#  # センド AUX_C
+#  AuxCSend: 0
+
+## ウェーブサウンドセット
+WaveSoundSet:
+#  # コメント
+#  Comment: ""
+#  # コメント1
+#  Comment1: ""
+#  # コメント2
+#  Comment2: ""
+#  # コメント3
+#  Comment3: ""
+#  # コメント4
+#  Comment4: ""
+#  # コメント5
+#  Comment5: ""
+#  # コメント6
+#  Comment6: ""
+#  # コメント7
+#  Comment7: ""
+#  # コメント8
+#  Comment8: ""
+#  # コメント9
+#  Comment9: ""
+#  # アイテムカラー None, Red, Orange, Yellow, Green, Cyan, Blue, Purple, Pink のいずれかを指定します。
+#  Color: None
+#  # 波形アーカイブ、AutoShared（自動(共有)）, AutoIndividual（自動(個別)）, 波形アーカイブ名のいずれかを指定します。
+#  WaveArchive: AutoShared
+
+## ウェーブサウンド
+WaveSound:
+#  # コメント
+#  Comment: ""
+#  # コメント1
+#  Comment1: ""
+#  # コメント2
+#  Comment2: ""
+#  # コメント3
+#  Comment3: ""
+#  # コメント4
+#  Comment4: ""
+#  # コメント5
+#  Comment5: ""
+#  # コメント6
+#  Comment6: ""
+#  # コメント7
+#  Comment7: ""
+#  # コメント8
+#  Comment8: ""
+#  # コメント9
+#  Comment9: ""
+#  # アイテムカラー None, Red, Orange, Yellow, Green, Cyan, Blue, Purple, Pink のいずれかを指定します。
+#  Color: None
+#  # 音量
+#  Volume: 96
+#  # プレイヤー優先度
+#  PlayerPriority: 64
+#  # プレイヤー、プレイヤー名を指定します。
+#  Player: DEFAULT_PLAYER
+#  # アクタープレイヤー
+#  ActorPlayer: 0
+#  # ユーザーパラメータ
+#  UserParameter: 0
+#  # ユーザーパラメータ1
+#  UserParameter1: 0
+#  # ユーザーパラメータ2
+#  UserParameter2: 0
+#  # ユーザーパラメータ3
+#  UserParameter3: 0
+#  # 3D 減衰カーブ、Log（対数）, Linear（リニア） のいずれかを指定します。
+#  DecayCurve3D: Log
+#  # 3D 減衰率
+#  DecayRatio3D: 0.5
+#  # 3D ドップラーファクター
+#  DopplerFactor3D: 0
+#  # 3D Vol の有効、True（有効）, False（無効）のいずれかを指定します。
+#  3DVolume: True
+#  # 3D Pan の有効、True（有効）, False（無効）のいずれかを指定します。
+#  3DPan: True
+#  # 3D Span の有効、True（有効）, False（無効）のいずれかを指定します。
+#  3DSurroundPan: True
+#  # 3D Pri の有効、True（有効）, False（無効）のいずれかを指定します。
+#  3DPriority: True
+#  # 3D Filter の有効、True（有効）, False（無効）のいずれかを指定します。
+#  3DFilter: False
+#  # 圧縮方式、Adpcm, PCM16 のいずれかを指定します。
+#  WaveEncoding: Adpcm
+#  # チャンネル優先度
+#  ChannelPriority: 64
+#  # パン
+#  Pan: 64
+#  # S パン
+#  SurroundPan: 0
+#  # ピッチ
+#  Pitch: 1
+#  # Env R
+#  EnvelopeRelease: 127
+#  # リリース時優先度固定の有効、True（有効）, False（無効）のいずれかを指定します。
+#  ReleasePriorityFixed: False
+#  # パンモード、Dual（デュアル）, Balance（バランス）のいずれかを指定します。
+#  PanMode: Dual
+#  # パンカーブ、Sqrt(-3dB), Sqrt(0dB), Sqrt(0dB,clamp), SinCos(-3dB), SinCos(0dB), SinCos(0dB,clamp), Linear(-6dB), Linear(0dB), Linear(0dB,clamp) のいずれかを指定します。
+#  PanCurve: Sqrt(-3dB)
+#  # LPF
+#  LPF: 64
+#  # Biquadフィルタの種類、None（使用しない）, LPF, HPF, BPF512（BPF 512Hz）, BPF1024（BPF 1024Hz）, BPF2048（BPF 2048Hz）, USR0~USR63（ユーザー定義0~63）のいずれかを指定します。
+#  BiquadType: None
+#  # biquad フィルタ値
+#  Biquad: 0
+#  # センド MAIN
+#  MainSend: 127
+#  # センド AUX_A
+#  AuxASend: 0
+#  # センド AUX_B
+#  AuxBSend: 0
+#  # センド AUX_C
+#  AuxCSend: 0
+
+## シーケンスサウンドセット
+SequenceSoundSet:
+#  # コメント
+#  Comment: ""
+#  # コメント1
+#  Comment1: ""
+#  # コメント2
+#  Comment2: ""
+#  # コメント3
+#  Comment3: ""
+#  # コメント4
+#  Comment4: ""
+#  # コメント5
+#  Comment5: ""
+#  # コメント6
+#  Comment6: ""
+#  # コメント7
+#  Comment7: ""
+#  # コメント8
+#  Comment8: ""
+#  # コメント9
+#  Comment9: ""
+#  # アイテムカラー None, Red, Orange, Yellow, Green, Cyan, Blue, Purple, Pink のいずれかを指定します。
+#  Color: None
+
+## シーケンスサウンド
+SequenceSound:
+#  # コメント
+#  Comment: ""
+#  # コメント1
+#  Comment1: ""
+#  # コメント2
+#  Comment2: ""
+#  # コメント3
+#  Comment3: ""
+#  # コメント4
+#  Comment4: ""
+#  # コメント5
+#  Comment5: ""
+#  # コメント6
+#  Comment6: ""
+#  # コメント7
+#  Comment7: ""
+#  # コメント8
+#  Comment8: ""
+#  # コメント9
+#  Comment9: ""
+#  # アイテムカラー None, Red, Orange, Yellow, Green, Cyan, Blue, Purple, Pink のいずれかを指定します。
+#  Color: None
+#  # 音量
+#  Volume: 64
+#  # プレイヤー優先度
+#  PlayerPriority: 64
+#  # プレイヤー、プレイヤー名を指定します。
+#  Player: DEFAULT_PLAYER
+#  # アクタープレイヤー
+#  ActorPlayer: 0
+#  # ユーザーパラメータ
+#  UserParameter: 0
+#  # ユーザーパラメータ1
+#  UserParameter1: 0
+#  # ユーザーパラメータ2
+#  UserParameter2: 0
+#  # ユーザーパラメータ3
+#  UserParameter3: 0
+#  # 3D 減衰カーブ、Log（対数）, Linear（リニア） のいずれかを指定します。
+#  DecayCurve3D: Log
+#  # 3D 減衰率
+#  DecayRatio3D: 0.5
+#  # 3D ドップラーファクター
+#  DopplerFactor3D: 0
+#  # 3D Vol の有効、True（有効）, False（無効）のいずれかを指定します。
+#  3DVolume: True
+#  # 3D Pan の有効、True（有効）, False（無効）のいずれかを指定します。
+#  3DPan: True
+#  # 3D Span の有効、True（有効）, False（無効）のいずれかを指定します。
+#  3DSurroundPan: True
+#  # 3D Pri の有効、True（有効）, False（無効）のいずれかを指定します。
+#  3DPriority: True
+#  # 3D Filter の有効、True（有効）, False（無効）のいずれかを指定します。
+#  3DFilter: False
+#  # ファイルタイプ、Text（テキスト）, Smf のいずれかを指定します。
+#  SequenceSoundFileType: Smf
+#  # バンク、バンク名を指定します。
+#  SoundSetBank: ""
+#  # バンク1、バンク名を指定します。
+#  SoundSetBank1: ""
+#  # バンク2、バンク名を指定します。
+#  SoundSetBank2: ""
+#  # バンク3、バンク名を指定します。
+#  SoundSetBank3: ""
+#  # チャンネル優先度
+#  ChannelPriority: 64
+#  # リリース時優先度固定の有効、True（有効）, False（無効）のいずれかを指定します。
+#  ReleasePriorityFixed: False
+
+## サウンドセットバンク
+SoundSetBank:
+#  # コメント
+#  Comment: ""
+#  # コメント1
+#  Comment1: ""
+#  # コメント2
+#  Comment2: ""
+#  # コメント3
+#  Comment3: ""
+#  # コメント4
+#  Comment4: ""
+#  # コメント5
+#  Comment5: ""
+#  # コメント6
+#  Comment6: ""
+#  # コメント7
+#  Comment7: ""
+#  # コメント8
+#  Comment8: ""
+#  # コメント9
+#  Comment9: ""
+#  # アイテムカラー None（なし）, Red, Orange, Yellow, Green, Cyan, Blue, Purple, Pink のいずれかを指定します。
+#  Color: None
+#  # 波形アーカイブ、AutoShared（自動(共有)）, AutoIndividual（自動(個別)）, 波形アーカイブ名のいずれかを指定します。
+#  WaveArchive: AutoShared
+
+## 波形アーカイブ
+WaveArchive:
+#  # コメント
+#  Comment: ""
+#  # コメント1
+#  Comment1: ""
+#  # コメント2
+#  Comment2: ""
+#  # コメント3
+#  Comment3: ""
+#  # コメント4
+#  Comment4: ""
+#  # コメント5
+#  Comment5: ""
+#  # コメント6
+#  Comment6: ""
+#  # コメント7
+#  Comment7: ""
+#  # コメント8
+#  Comment8: ""
+#  # コメント9
+#  Comment9: ""
+#  # アイテムカラー None, Red, Orange, Yellow, Green, Cyan, Blue, Purple, Pink のいずれかを指定します。
+#  Color: None
+#  # 個別ロードの有効、True（有効）, False（無効）のいずれかを指定します。
+#  Individual: False
+
+## グループ
+Group:
+#  # コメント
+#  Comment: ""
+#  # コメント1
+#  Comment1: ""
+#  # コメント2
+#  Comment2: ""
+#  # コメント3
+#  Comment3: ""
+#  # コメント4
+#  Comment4: ""
+#  # コメント5
+#  Comment5: ""
+#  # コメント6
+#  Comment6: ""
+#  # コメント7
+#  Comment7: ""
+#  # コメント8
+#  Comment8: ""
+#  # コメント9
+#  Comment9: ""
+#  # アイテムカラー None, Red, Orange, Yellow, Green, Cyan, Blue, Purple, Pink のいずれかを指定します。
+#  Color: None
+#  # 出力方式、Embedding（埋め込み）, Link（リンク）, User（ユーザー管理）, None（出力しない）のいずれかを指定します。
+#  GroupOutputType: Link
+
+## グループアイテム
+GroupItem:
+#  # コメント
+#  Comment: ""
+#  # コメント1
+#  Comment1: ""
+#  # コメント2
+#  Comment2: ""
+#  # コメント3
+#  Comment3: ""
+#  # コメント4
+#  Comment4: ""
+#  # コメント5
+#  Comment5: ""
+#  # コメント6
+#  Comment6: ""
+#  # コメント7
+#  Comment7: ""
+#  # コメント8
+#  Comment8: ""
+#  # コメント9
+#  Comment9: ""
+
+## プレイヤー
+Player:
+#  # コメント
+#  Comment: ""
+#  # コメント1
+#  Comment1: ""
+#  # コメント2
+#  Comment2: ""
+#  # コメント3
+#  Comment3: ""
+#  # コメント4
+#  Comment4: ""
+#  # コメント5
+#  Comment5: ""
+#  # コメント6
+#  Comment6: ""
+#  # コメント7
+#  Comment7: ""
+#  # コメント8
+#  Comment8: ""
+#  # コメント9
+#  Comment9: ""
+#  # アイテムカラー None, Red, Orange, Yellow, Green, Cyan, Blue, Purple, Pink のいずれかを指定します。
+#  Color: None
+#  # サウンドリミット
+#  SoundLimit: 1
+#  # ヒープサイズ
+#  HeapSize: 0
+
+## インストルメント
+Instrument:
+#  # コメント
+#  Comment: ""
+#  # コメント1
+#  Comment1: ""
+#  # コメント2
+#  Comment2: ""
+#  # コメント3
+#  Comment3: ""
+#  # コメント4
+#  Comment4: ""
+#  # コメント5
+#  Comment5: ""
+#  # コメント6
+#  Comment6: ""
+#  # コメント7
+#  Comment7: ""
+#  # コメント8
+#  Comment8: ""
+#  # コメント9
+#  Comment9: ""
+#  # アイテムカラー None, Red, Orange, Yellow, Green, Cyan, Blue, Purple, Pink のいずれかを指定します。
+#  Color: None
+#  # 音量
+#  Volume: 127
+#  # ピッチ（半音）
+#  PitchSemitones: 0
+#  # ピッチ（セント）
+#  PitchCents: 0
+#  # Env A
+#  EnvAttack: 127
+#  # Env D
+#  EnvDecay: 127
+#  # Env S
+#  EnvSustain: 127
+#  # Env H
+#  EnvHold: 0
+#  # Env R
+#  EnvRelease: 127
+#  # エンベロープ、Instrument（インストルメント単位）, Region（リージョン単位）のいずれかを指定します。
+#  EnvelopeMode: Instrument

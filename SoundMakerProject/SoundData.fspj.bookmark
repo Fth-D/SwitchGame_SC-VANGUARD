@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BookmarkConfiguration Platform="Any" Version="1.0.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nwplc="NintendoWare.SoundMaker.BookmarkConfiguration">
+  <BookmarkConfiguration xmlns="NintendoWare.SoundMaker.SoundProjectConfiguration">
+    <Bookmarks Name="ブックマーク" Type="Folder" />
+  </BookmarkConfiguration>
+</BookmarkConfiguration>

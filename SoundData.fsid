@@ -1,0 +1,19 @@
+﻿// SoundIDs
+static const unsigned int TITLE_BGM = 0x01000000;
+static const unsigned int GAME_BGM = 0x01000001;
+static const unsigned int SE_HIT = 0x01000002;
+
+// SoundGroupIDs
+// WaveSoundSetIDs
+static const unsigned int WSDSET_0 = 0x02000000;
+// SequenceSoundSetIDs
+
+// BankIDs
+
+// PlayerIDs
+static const unsigned int BGM_01 = 0x04000000;
+static const unsigned int SE_01 = 0x04000001;
+
+// WaveArchiveIDs
+
+// GroupIDs
