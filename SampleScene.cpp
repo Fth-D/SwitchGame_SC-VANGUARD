@@ -16,7 +16,6 @@ void Game::InitializeSample()
 	//	↓InitializeSample（初期化関数）に記述		//
 	//----------------------------------------------//
 
-	ax = 0;
 	bx = 400;
 
 	objA = AddObject(new GameObject);
