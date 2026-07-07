@@ -61,6 +61,7 @@
     <CustomBuild Include="Application.aarch64.lp64.nmeta" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="EnemyCharacter.h" />
     <ClInclude Include="Framework\Animation.h" />
     <ClInclude Include="Framework\AnimationCell.h" />
     <ClInclude Include="Framework\Camera.h" />
@@ -78,6 +79,8 @@
     <ClInclude Include="Framework\Log.h" />
     <ClInclude Include="Framework\Polygon.h" />
     <ClInclude Include="Framework\PrimitiveRender.h" />
+    <ClInclude Include="PlayerCharacter.h" />
+    <ClInclude Include="Projectile.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Framework\sound.h" />
     <ClInclude Include="Framework\SpriteSheet.h" />
@@ -88,6 +91,7 @@
     <ClInclude Include="Framework\GameTime.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="EnemyCharacter.cpp" />
     <ClCompile Include="Framework\Animation.cpp" />
     <ClCompile Include="Framework\AnimationCell.cpp" />
     <ClCompile Include="Framework\Camera.cpp" />
@@ -105,12 +109,16 @@
     <ClCompile Include="Framework\Polygon.cpp" />
     <ClCompile Include="Framework\PrimitiveRender.cpp" />
     <ClCompile Include="Framework\Renderer.cpp" />
+    <ClCompile Include="PlayerCharacter.cpp" />
+    <ClCompile Include="Projectile.cpp" />
     <ClCompile Include="ResultScene.cpp" />
     <ClCompile Include="Framework\SpriteSheet.cpp" />
     <ClCompile Include="Framework\Text.cpp" />
     <ClCompile Include="Framework\GameTime.cpp" />
     <ClCompile Include="TitleScene.cpp" />
-    <ClCompile Include="SampleScene.cpp" />
+    <ClCompile Include="SampleScene.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{C6AA153E-F76D-440E-8BAA-51E458D71105}</ProjectGuid>
@@ -491,7 +499,7 @@
     <ClCompile Include="Framework\Platform\Switch\texture.Nx.cpp" />
   </ItemGroup>
   <!-- Win64 platform sources -->
-    <ItemGroup Condition="'$(Platform)'=='x64' Or '$(Platform)'=='Win32'">
+  <ItemGroup Condition="'$(Platform)'=='x64' Or '$(Platform)'=='Win32'">
     <ClCompile Include="Framework\Platform\Win64\controller.Win64.cpp" />
     <ClCompile Include="Framework\Platform\Win64\sound.Win64.cpp" />
     <ClCompile Include="Framework\ThirdParty\glad\src\glad.c" />

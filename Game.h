@@ -95,10 +95,10 @@ private:
 
 public:
 	// 現在のシーン
-	Scene currentScene = SAMPLE;
+	Scene currentScene = GAME;
 
 	// 次のシーン（予定）
-	Scene nextScene = SAMPLE;
+	Scene nextScene = GAME;
 
 	// ゲーム内にオブジェクトを追加
 	GameObject* AddObject(GameObject* newObject = nullptr);

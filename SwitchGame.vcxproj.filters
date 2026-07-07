@@ -59,7 +59,7 @@
     <Filter Include="ソース ファイル\System">
       <UniqueIdentifier>{7110746e-c4d8-4edc-8fdc-faaa6fcdaf47}</UniqueIdentifier>
     </Filter>
-      <Filter Include="ソース ファイル\Platform">
+    <Filter Include="ソース ファイル\Platform">
       <UniqueIdentifier>{94694e0f-6192-4eb2-bc6e-60a9be7f0b45}</UniqueIdentifier>
     </Filter>
     <Filter Include="ソース ファイル\Platform\Switch">
@@ -74,7 +74,7 @@
     <Filter Include="ソース ファイル\Platform\DX11">
       <UniqueIdentifier>{e3bba06f-eacc-488d-80b7-81203721599c}</UniqueIdentifier>
     </Filter>
-</ItemGroup>
+  </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameObject.h">
       <Filter>ヘッダー ファイル\Object</Filter>
@@ -156,6 +156,15 @@
     </ClInclude>
     <ClInclude Include="Framework\Platform\PlatformTypes.h">
       <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerCharacter.h">
+      <Filter>ヘッダー ファイル\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Projectile.h">
+      <Filter>ヘッダー ファイル\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyCharacter.h">
+      <Filter>ヘッダー ファイル\Object</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -250,32 +259,14 @@
     <ClCompile Include="Framework\ThirdParty\glad\src\glad.c">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Framework\Platform\DX11\Renderer.DX11.cpp">
-      <Filter>ソース ファイル\Platform\DX11</Filter>
+    <ClCompile Include="PlayerCharacter.cpp">
+      <Filter>ソース ファイル\Object</Filter>
     </ClCompile>
-    <ClCompile Include="Framework\Platform\DX11\GraphicsHelper.Win64.DX11.cpp">
-      <Filter>ソース ファイル\Platform\DX11</Filter>
+    <ClCompile Include="Projectile.cpp">
+      <Filter>ソース ファイル\Object</Filter>
     </ClCompile>
-    <ClCompile Include="Framework\Platform\DX11\system.Win64.DX11.cpp">
-      <Filter>ソース ファイル\Platform\DX11</Filter>
+    <ClCompile Include="EnemyCharacter.cpp">
+      <Filter>ソース ファイル\Object</Filter>
     </ClCompile>
-    <ClCompile Include="Framework\Platform\DX11\texture.Win64.DX11.cpp">
-      <Filter>ソース ファイル\Platform\DX11</Filter>
-    </ClCompile>
-      <ClCompile Include="Framework\Platform\Switch\system.Nx.cpp">
-      <Filter>ソース ファイル\Platform\Switch</Filter>
-    </ClCompile>
-    <ClCompile Include="Framework\Platform\Switch\GraphicsHelper.Nx.cpp">
-      <Filter>ソース ファイル\Platform\Switch</Filter>
-    </ClCompile>
-    <ClCompile Include="Framework\Platform\Switch\controller.Nx.cpp">
-      <Filter>ソース ファイル\Platform\Switch</Filter>
-    </ClCompile>
-    <ClCompile Include="Framework\Platform\Switch\sound.Nx.cpp">
-      <Filter>ソース ファイル\Platform\Switch</Filter>
-    </ClCompile>
-    <ClCompile Include="Framework\Platform\Switch\texture.Nx.cpp">
-      <Filter>ソース ファイル\Platform\Switch</Filter>
-    </ClCompile>
-</ItemGroup>
+  </ItemGroup>
 </Project>
