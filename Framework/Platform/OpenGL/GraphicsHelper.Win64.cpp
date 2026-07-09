@@ -14,7 +14,7 @@ void GraphicsHelper::Initialize()
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 5);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-	g_Window = glfwCreateWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "SampleGame", nullptr, nullptr);
+	g_Window = glfwCreateWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Stellar Chronicle: VANGUARD", nullptr, nullptr);
 	if (!g_Window) {
 		printf("Failed to create GLFW window\n");
 		glfwTerminate();
