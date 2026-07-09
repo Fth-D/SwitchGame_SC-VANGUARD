@@ -32,7 +32,6 @@ void PlayerCharacter::ApplyMode()
 	if (mode == FIGHTER)
 	{
 		speed = 1200.0f;		// ロボットモードの移動速度
-		bulletSpeed = 2600.0f;	// ロボットモードの弾の速度
 		SetRectangleParameter(0, MakeFloat2(0, 0), MakeFloat2(70.0f, 40.0f));	// ファイターモードの当たり判定
 
 		// --- ファイター用シートに切り替え ---
@@ -45,7 +44,6 @@ void PlayerCharacter::ApplyMode()
 	else if (mode == ROBOT)
 	{
 		speed = 750.0f;			// ファイターモードの移動速度
-		bulletSpeed = 2000.0f;	// ファイターモードの弾の速度
 		SetRectangleParameter(0, MakeFloat2(0, 0), MakeFloat2(40.0f, 70.0f));	// ロボットモードの当たり判定
 
 		// --- ロボット用シートに切り替え ---
@@ -118,8 +116,8 @@ void PlayerCharacter::Setup(float x, float y)
 	fireIntervalTable[WEAPON_VULCAN][FIGHTER] = 0.05f;	// ファイターモードでバルカンの発射間隔
 	fireIntervalTable[WEAPON_VULCAN][ROBOT] = 0.09f;	// ロボットモードでバルカンの発射間隔
 	
-	fireIntervalTable[WEAPON_LASER][FIGHTER] = 0.02f;	// ファイターモードでビームキャノンの発射間隔
-	fireIntervalTable[WEAPON_LASER][ROBOT] = 0.03f;		// ロボットモードでビームキャノンの発射間隔
+	fireIntervalTable[WEAPON_LASER][FIGHTER] = 0.01f;	// ファイターモードでビームキャノンの発射間隔
+	fireIntervalTable[WEAPON_LASER][ROBOT] = 0.01f;		// ロボットモードでビームキャノンの発射間隔
 
 	fireIntervalTable[WEAPON_HOMING][FIGHTER] = 0.10f;	// ファイターモードでホーミングミサイルの発射間隔
 	fireIntervalTable[WEAPON_HOMING][ROBOT] = 0.10f;	// ロボットモードでホーミングミサイルのの発射間隔
@@ -133,6 +131,11 @@ void PlayerCharacter::Setup(float x, float y)
 	
 	muzzleTable[WEAPON_HOMING][FIGHTER] = MakeFloat2(0, 0);
 	muzzleTable[WEAPON_HOMING][ROBOT] = MakeFloat2(0, 0);
+
+	// --- 弾速表(武器だけで決まる) ---
+	bulletSpeedTable[WEAPON_VULCAN] = 2400.0f;	// Vulcanが範囲が広い
+	bulletSpeedTable[WEAPON_LASER] = 4200.0f;	// Laserが早い
+	bulletSpeedTable[WEAPON_HOMING] = 1800.0f;	// Homingが緩いが強い
 
 	mode = FIGHTER;		// 初期モードはファイター
 	ApplyMode();		// モードに合わせてパラメータを適用する
@@ -188,14 +191,16 @@ void PlayerCharacter::Update(float dt)
 		float muzzleX = player_position.x + muzzle.x;		//実際の砲口X座標
 		float muzzleY = player_position.y + muzzle.y;		//実際の砲口Y座標
 
+		float currentBulletSpeed = bulletSpeedTable[currentWeapon];	//それぞれの武器の弾丸飛び速度も違う
+
 		//　武器ごとに発射
 		switch (currentWeapon)
 		{
 		case WEAPON_VULCAN:
-			FireVulcan(muzzleX, muzzleY, 5, 20.0f);	//バルカン発射
+			FireVulcan(muzzleX, muzzleY, 5, 20.0f,currentBulletSpeed);	//バルカン発射
 			break;
 		case WEAPON_LASER:
-			FireLaser(muzzleX, muzzleY);		//	
+			FireLaser(muzzleX, muzzleY,currentBulletSpeed);		//	
 			break;
 		case WEAPON_HOMING:
 			break;
@@ -266,7 +271,7 @@ void PlayerCharacter::Update(float dt)
 // 右向き＝0度。0度を中心に上下広げる													//
 // 三角関数で各弾の vx と vy を出す（速さは全部同じ）									//
 //======================================================================================//
-void PlayerCharacter::FireVulcan(float x, float y, int count, float spreadDegree)
+void PlayerCharacter::FireVulcan(float x, float y, int count, float spreadDegree, float bulletSpeed)
 {
 	float start = -spreadDegree * 0.5f;								// 扇の一番端の角度
 	float step = (count > 1) ? spreadDegree / (count - 1) : 0.0f;	// 扇の角度を count 等分する（1発ごとの角度差）
@@ -303,7 +308,7 @@ void PlayerCharacter::FireVulcan(float x, float y, int count, float spreadDegree
 //	FireLaser: 一直線に貫通する															//
 //======================================================================================//
 
-void PlayerCharacter::FireLaser(float x, float y)
+void PlayerCharacter::FireLaser(float x, float y, float bulletSpeed)
 {
 	float velocityX = bulletSpeed;	// まっすぐ右へ（bulletSpeed はモードで変わる）
 	float velocityY = 0.0f;	// 上下には散らさない

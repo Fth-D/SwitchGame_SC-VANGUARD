@@ -54,6 +54,9 @@ private:
 	Mode mode = FIGHTER; // 初期モードはファイター
 	WeaponType currentWeapon = WEAPON_VULCAN;	// 今の武器
 	float fireCooldown = 0.0f; // 射撃冷却時間、次の弾まであと何秒待つか
+
+	//--- 武器 の表(武器だけで決まる、形態と無関係) ---
+	float bulletSpeedTable[WEAPON_COUNT];	// 弾速(武器ごと)
 	
 	//--- 武器 × 形態 の表 [武器][形態] ---
 	float  fireIntervalTable[WEAPON_COUNT][MODE_COUNT];	// 射速
@@ -65,11 +68,10 @@ private:
 	//--------------------------------------------------------------//
 	float speed = 700.0f;			// 移動速度
 	float fireInterval = 0.06f;		// 発射間隔（小さいほどで連射が密になる）
-	float bulletSpeed = 2400.0f;	// 弾の速度
 
 	void ApplyMode();				// モードに合わせてパラメータを適用する(値を一式セット)
-	void FireVulcan(float x, float y, int count, float spreadDegree);	//扇形に弾を発射する
-	void FireLaser(float x, float y);	// 直線にレーザーを発射する
+	void FireVulcan(float x, float y, int count, float spreadDegree, float bulletSpeed);	//扇形に弾を発射する
+	void FireLaser(float x, float y, float bulletSpeed);	// 直線にレーザーを発射する
 
 public:
 	void Setup(float x, float y); // 初期化（画像、当たり判定、位置）
