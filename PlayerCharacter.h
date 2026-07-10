@@ -47,7 +47,7 @@ extern std::vector<LaserBeam> Straight;		// レーザーリストの実体は Ga
 struct HomingMissile
 {
 	GameObject* obj;						// 弾のGameObject
-	float omingVelocityX, homingVelocityY;	// ホーミングミサイルの速度ベクトル(毎秒ピクセル)
+	float homingVelocityX, homingVelocityY;	// ホーミングミサイルの速度ベクトル(毎秒ピクセル)
 	float homingTimer = 0.0f;				// 発射からの経過時間(段階判定に使う)
 };
 extern std::vector<HomingMissile> Chase;	// ホーミングリストの実体は GameScene.cpp にあります。
