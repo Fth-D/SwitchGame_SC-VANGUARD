@@ -349,29 +349,39 @@ void PlayerCharacter::FireLaser(float x, float y, float bulletSpeed)
 }
 
 //======================================================================================//
-//	FireHoming: 敵追尾																	//
+//	FireHoming: 敵追尾									 								//
+//--------------------------------------------------------------------------------------//
+// 2発同時に発射する。初期位置を少しずらすことで、重なって見えないようにする。			//
+// 各発は独立してChaseリストに追加され、GameScene側で各自最も近い敵を追う。				//
 //======================================================================================//
-
 void PlayerCharacter::FireHoming(float x, float y, float bulletSpeed)
 {
+	static const int HOMING_SHOT_COUNT = 8;			// 一度に発射する数
+	static const float HOMING_SPAWN_OFFSET_Y = 15.0f;	// 各発の初期Y位置のずれ幅
 
-	GameObject* Homing = GameAPI.AddObject(new GameObject);
-	Homing->Activation();
-	Homing->Show();
-	Homing->GetSprite().Initialize();
-	Homing->SetObjectType(Bullet);
-	Homing->GetSprite().LoadTexture("rom:/texture/Object/PlayerBullet/Vulcan.tga");
-	Homing->GetSprite().DivideAnimationCells(1, 1);
-	Homing->GetSprite().CreateAnimation("Homing", 0, 0);
-	Homing->GetSprite().SetAnimation("Homing");
-	Homing->GetSprite().SetPolygonSize(MakeFloat2(20.0f, 20.0f));
+	for (int i = 0; i < HOMING_SHOT_COUNT; i++)
+	{
+		// i=0 なら上にずらす、i=1 なら下にずらす(2発の場合)
+		float offsetY = (i == 0) ? -HOMING_SPAWN_OFFSET_Y : HOMING_SPAWN_OFFSET_Y;
 
-	Homing->GenerateRectangleCollision(1);
-	Homing->SetRectangleParameter(0, MakeFloat2(0, 0), MakeFloat2(20.0f, 20.0f));
+		GameObject* Homing = GameAPI.AddObject(new GameObject);
+		Homing->Activation();
+		Homing->Show();
+		Homing->GetSprite().Initialize();
+		Homing->SetObjectType(Bullet);
+		Homing->GetSprite().LoadTexture("rom:/texture/Object/PlayerBullet/Vulcan.tga");
+		Homing->GetSprite().DivideAnimationCells(1, 1);
+		Homing->GetSprite().CreateAnimation("Homing", 0, 0);
+		Homing->GetSprite().SetAnimation("Homing");
+		Homing->GetSprite().SetPolygonSize(MakeFloat2(20.0f, 20.0f));
 
-	Homing->SetPosition(MakeFloat3(x, y, 0.0f));
+		Homing->GenerateRectangleCollision(1);
+		Homing->SetRectangleParameter(0, MakeFloat2(0, 0), MakeFloat2(20.0f, 20.0f));
 
-	Chase.push_back({ Homing,bulletSpeed,0.0f });
+		Homing->SetPosition(MakeFloat3(x, y + offsetY, 0.0f));	// Y座標をずらして生成
+
+		Chase.push_back({ Homing, bulletSpeed, 0.0f });
+	}
 }
 
 void PlayerCharacter::CollisionReaction(GameObject* opponent)
