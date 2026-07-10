@@ -22,12 +22,35 @@ enum WeaponType	// 武器の種類
 // 弾リストの実体は SampleScene.cpp にあります。										//
 //======================================================================================//
 
+//======================================================================================//
+//  各武器の発射物構造体 ------> 武器ごとに独立した「飛んでいる1発」のデータ			//
+//--------------------------------------------------------------------------------------//
+// 各武器の弾は挙動が異なる(Vulcan/Laserは直進のみ、Homingは追尾ロジックが必要)ため、	//
+// 共通のstructにまとめず、武器ごとに専用のstructで管理する。							//
+// これにより、ある武器の仕様変更が他の武器に影響しない。								//
+//======================================================================================//
+
 struct VulcanBullet
 {
-	GameObject* obj;	// 弾の GameObject
-	float vx, vy;		// 弾の速度ベクトル（毎秒ピクセル）
+	GameObject* obj;						// 弾の GameObject
+	float vulcanVelocityX, vulcanVelocityY;	// 弾の速度ベクトル（毎秒ピクセル）
 };
-extern std::vector<VulcanBullet> Spread;	// 弾リストの実体は SampleScene.cpp にあります。
+extern std::vector<VulcanBullet> Spread;	// 弾リストの実体は GameScene.cpp にあります。
+
+struct LaserBeam
+{
+	GameObject* obj;						// 弾のGameObject
+	float laserVelocityX, laserVelocityY;	// レーザーの速度ベクトル(毎秒ピクセル)
+};
+extern std::vector<LaserBeam> Straight;		// レーザーリストの実体は GameScene.cpp にあります
+
+struct HomingMissile
+{
+	GameObject* obj;						// 弾のGameObject
+	float omingVelocityX, homingVelocityY;	// ホーミングミサイルの速度ベクトル(毎秒ピクセル)
+	float homingTimer = 0.0f;				// 発射からの経過時間(段階判定に使う)
+};
+extern std::vector<HomingMissile> Chase;	// ホーミングリストの実体は GameScene.cpp にあります。
 
 //======================================================================================//
 //  Player Class ---> Player: プレイヤー機体											//
@@ -78,6 +101,7 @@ private:
 	void ApplyMode();				// モードに合わせてパラメータを適用する(値を一式セット)
 	void FireVulcan(float x, float y, int count, float spreadDegree, float bulletSpeed);	//扇形に弾を発射する
 	void FireLaser(float x, float y, float bulletSpeed);	// 直線にレーザーを発射する
+	void FireHoming(float x, float y, float bulletSpeed);	// 追尾ミサイルを発射する
 	void UseRepairCore();	// リペアコアを1つ消費してHP全回復＋無敵時間を得る
 public:
 	void Setup(float x, float y); // 初期化（画像、当たり判定、位置）
