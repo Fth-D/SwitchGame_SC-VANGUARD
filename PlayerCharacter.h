@@ -103,6 +103,7 @@ private:
 	void FireLaser(float x, float y, float bulletSpeed);	// 直線にレーザーを発射する
 	void FireHoming(float x, float y, float bulletSpeed);	// 追尾ミサイルを発射する
 	void UseRepairCore();	// リペアコアを1つ消費してHP全回復＋無敵時間を得る
+
 public:
 	void Setup(float x, float y); // 初期化（画像、当たり判定、位置）
 	void Update(float dt) override; // 每フレーム：移動+変形+射撃（自動で呼ばれる）
@@ -110,4 +111,8 @@ public:
 	void CollisionReaction(GameObject* opponent) override; // 當碰撞發生時的反應
 	void TakeDamage(int damage);	// ダメージを受ける(無敵中は無効。HPが0以下でリペアコアを自動使用)
 	bool IsGameOver()const;	// HPが0以下、かつリペアコアも尽きたかどうか
+
+	int GetHp() const { return HP; }		// class 外部からHPを参照できるようにする
+	int GetMaxHp() const { return max_HP; }	// class 外部からHPの上限を参照できるようにする
+	Mode GetMode() const { return mode; }	// class 外部から現在のモードを参照できるようにする
 };

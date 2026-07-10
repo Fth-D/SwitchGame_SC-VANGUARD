@@ -239,13 +239,21 @@ void Game::UpdateGame(float dt)		// ここにゲームシーン更新コード�
 		if (missile.homingTimer < 0.15f)
 		{
 			// ① 彈出階段:垂直向上
-			missile.homingVelocityX = 0.0f;
-			missile.homingVelocityY = 800.0f;
+			if (Vanguard->GetMode()==PlayerCharacter::ROBOT)
+			{
+				missile.homingVelocityX = -80.0f;
+				missile.homingVelocityY = -500.0f;
+			}
+			else if (Vanguard->GetMode()==PlayerCharacter::FIGHTER)
+			{
+				missile.homingVelocityX = -80.0f;
+				missile.homingVelocityY = 500.0f;
+			}
 		}
 		else if (missile.homingTimer < 0.4f)
 		{
 			// ② 推進階段:轉向前(向右)
-			missile.homingVelocityX = 1500.0f;
+			missile.homingVelocityX = 200.0f;
 			missile.homingVelocityY = 0.0f;
 		}
 		else
@@ -267,7 +275,7 @@ void Game::UpdateGame(float dt)		// ここにゲームシーン更新コード�
 					missile.homingVelocityY * missile.homingVelocityY);
 				if (speed > 0.0f)
 				{
-					float homingSpeed = 1800.0f;
+					float homingSpeed = 4800.0f;
 					missile.homingVelocityX = missile.homingVelocityX / speed * homingSpeed;
 					missile.homingVelocityY = missile.homingVelocityY / speed * homingSpeed;
 				}
