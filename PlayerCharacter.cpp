@@ -207,6 +207,7 @@ void PlayerCharacter::Update(float dt)
 			FireLaser(muzzleX, muzzleY, currentBulletSpeed);		//	
 			break;
 		case WEAPON_HOMING:
+			FireHoming(muzzleX, muzzleY, currentBulletSpeed);	
 			break;
 		case WEAPON_COUNT:
 			break;
@@ -347,6 +348,31 @@ void PlayerCharacter::FireLaser(float x, float y, float bulletSpeed)
 	Straight.push_back({ Laser,velocityX,velocityY });	// 弾リストに追加(速度も一緒に覚える)
 }
 
+//======================================================================================//
+//	FireHoming: 敵追尾																	//
+//======================================================================================//
+
+void PlayerCharacter::FireHoming(float x, float y, float bulletSpeed)
+{
+
+	GameObject* Homing = GameAPI.AddObject(new GameObject);
+	Homing->Activation();
+	Homing->Show();
+	Homing->GetSprite().Initialize();
+	Homing->SetObjectType(Bullet);
+	Homing->GetSprite().LoadTexture("rom:/texture/Object/PlayerBullet/Vulcan.tga");
+	Homing->GetSprite().DivideAnimationCells(1, 1);
+	Homing->GetSprite().CreateAnimation("Homing", 0, 0);
+	Homing->GetSprite().SetAnimation("Homing");
+	Homing->GetSprite().SetPolygonSize(MakeFloat2(20.0f, 20.0f));
+
+	Homing->GenerateRectangleCollision(1);
+	Homing->SetRectangleParameter(0, MakeFloat2(0, 0), MakeFloat2(20.0f, 20.0f));
+
+	Homing->SetPosition(MakeFloat3(x, y, 0.0f));
+
+	Chase.push_back({ Homing,bulletSpeed,0.0f });
+}
 
 void PlayerCharacter::CollisionReaction(GameObject* opponent)
 {
