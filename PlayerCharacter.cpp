@@ -293,8 +293,8 @@ void PlayerCharacter::FireVulcan(float x, float y, int count, float spreadDegree
 		float degree = start + step * i;	// この弾の角度
 		float radian = degree * 3.14159265f / 180.0f;	// 角度 → ラジアンに変換
 
-		float vx = cosf(radian) * bulletSpeed;	// 発散方向は右で（bulletSpeed はモードで変わる）
-		float vy = sinf(radian) * bulletSpeed;	// 上下に散らす
+		float velocityX = cosf(radian) * bulletSpeed;	// 発散方向は右で（bulletSpeed はモードで変わる）
+		float velocityY = sinf(radian) * bulletSpeed;	// 上下に散らす
 
 		GameObject* Vulcan = GameAPI.AddObject(new GameObject);	// 弾の GameObject を生成
 		Vulcan->Activation();	// 有効化
@@ -313,7 +313,7 @@ void PlayerCharacter::FireVulcan(float x, float y, int count, float spreadDegree
 
 		Vulcan->SetPosition(MakeFloat3(x, y, 0.0f));	// 座標指定
 
-		Spread.push_back({ Vulcan, vx, vy });	// 弾リストに追加(速度も一緒に覚える)
+		Spread.push_back({ Vulcan, velocityX, velocityY });	// 弾リストに追加(速度も一緒に覚える)
 	}
 }
 
@@ -344,7 +344,7 @@ void PlayerCharacter::FireLaser(float x, float y, float bulletSpeed)
 
 	Laser->SetPosition(MakeFloat3(x, y, 0.0f));	//座標指定
 
-	Spread.push_back({ Laser,velocityX,velocityY });	// 弾リストに追加(速度も一緒に覚える)
+	Straight.push_back({ Laser,velocityX,velocityY });	// 弾リストに追加(速度も一緒に覚える)
 }
 
 
