@@ -57,7 +57,7 @@ private:
 
 	//--- 武器 の表(武器だけで決まる、形態と無関係) ---
 	float bulletSpeedTable[WEAPON_COUNT];	// 弾速(武器ごと)
-	
+
 	//--- 武器 × 形態 の表 [武器][形態] ---
 	float  fireIntervalTable[WEAPON_COUNT][MODE_COUNT];	// 射速
 	Float2 muzzleTable[WEAPON_COUNT][MODE_COUNT];		// 炮口offset
@@ -68,14 +68,22 @@ private:
 	//--------------------------------------------------------------//
 	float speed = 700.0f;			// 移動速度
 	float fireInterval = 0.06f;		// 発射間隔（小さいほどで連射が密になる）
+	float invincibleTimer = 0.0f;	// 無敵時間計算（秒）
+
+	int HP = 100;			// プレイヤーのHP初期値
+	int max_HP = 100;		// プレイヤーのHP最大値
+	int repairCore = 3;		// リペアコア初期持ち数
+	int max_repairCore = 6;	// リペアコア最大持ち数
 
 	void ApplyMode();				// モードに合わせてパラメータを適用する(値を一式セット)
 	void FireVulcan(float x, float y, int count, float spreadDegree, float bulletSpeed);	//扇形に弾を発射する
 	void FireLaser(float x, float y, float bulletSpeed);	// 直線にレーザーを発射する
-
+	void UseRepairCore();	// リペアコアを1つ消費してHP全回復＋無敵時間を得る
 public:
 	void Setup(float x, float y); // 初期化（画像、当たり判定、位置）
 	void Update(float dt) override; // 每フレーム：移動+変形+射撃（自動で呼ばれる）
 	void ToggleMode(); // 人形 ⇔ ファイター を切り替える
 	void CollisionReaction(GameObject* opponent) override; // 當碰撞發生時的反應
+	void TakeDamage(int damage);	// ダメージを受ける(無敵中は無効。HPが0以下でリペアコアを自動使用)
+	bool IsGameOver()const;	// HPが0以下、かつリペアコアも尽きたかどうか
 };

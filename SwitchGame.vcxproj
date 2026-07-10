@@ -79,6 +79,7 @@
     <ClInclude Include="Framework\Log.h" />
     <ClInclude Include="Framework\Polygon.h" />
     <ClInclude Include="Framework\PrimitiveRender.h" />
+    <ClInclude Include="GameScene.h" />
     <ClInclude Include="PlayerCharacter.h" />
     <ClInclude Include="Projectile.h" />
     <ClInclude Include="Scene.h" />
@@ -224,6 +225,7 @@
     <NintendoSdkRoot>$(NINTENDO_SDK_ROOT)</NintendoSdkRoot>
     <NintendoSdkSpec>NX</NintendoSdkSpec>
     <NintendoSdkBuildType>Release</NintendoSdkBuildType>
+    <ApplicationProgramFormat>Nsp</ApplicationProgramFormat>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -486,6 +488,7 @@
       <FinalizeMetaSource>$(ProjectDir)Application.aarch64.lp64.nmeta</FinalizeMetaSource>
       <AdditionalDependencies>libnn_gll.a;libnn_atk.a;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalNSODependencies>opengl.nso;%(AdditionalNSODependencies)</AdditionalNSODependencies>
+      <AdditionalDependenciesNoCull>libnn_atk.a;libnns_atk.a</AdditionalDependenciesNoCull>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

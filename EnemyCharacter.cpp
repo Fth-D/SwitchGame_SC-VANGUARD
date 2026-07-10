@@ -17,11 +17,14 @@ void EnemyCharacter::Setup(float Enemy_posX, float Enemy_posY, float Enemy_sizeX
 	Activation();	//有効化
 	Show();	//描画有効化
 	GetSprite().Initialize();	// スプライト初期化
+	SetObjectType(Enemy);	//オブジェクト分類
+
 	GetSprite().LoadTexture(texturePath);	//画像読み込む
 	GetSprite().DivideAnimationCells(Colums, Rows); //分割
 	GetSprite().CreateAnimation("EnemyAnim", 0, Colums-1); //アニメーションを作成
 	GetSprite().SetAnimationFrameTime("EnemyAnim", (Colums/10.0f));
 	GetSprite().SetAnimation("EnemyAnim"); //アニメーションを指定
+
 	GetSprite().SetPolygonSize(MakeFloat2(Enemy_sizeX, Enemy_sizeY));	//サイズ
 
 	GenerateRectangleCollision(1);	//方形の当たり判定を生成
