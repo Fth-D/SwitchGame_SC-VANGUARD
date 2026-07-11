@@ -41,6 +41,7 @@ struct LaserBeam
 {
 	GameObject* obj;						// 弾のGameObject
 	float laserVelocityX, laserVelocityY;	// レーザーの速度ベクトル(毎秒ピクセル)
+	bool isFollowingPlayer = true;			// ボタンを押している間はtrue(プレイヤーのYに追従する)
 };
 extern std::vector<LaserBeam> Straight;		// レーザーリストの実体は GameScene.cpp にあります
 
@@ -92,6 +93,10 @@ private:
 	float speed = 700.0f;			// 移動速度
 	float fireInterval = 0.06f;		// 発射間隔（小さいほどで連射が密になる）
 	float invincibleTimer = 0.0f;	// 無敵時間計算（秒）
+	int homingShotsRemaining = 0;		// 連発中、まだ発射していない残り発数
+	float homingBurstTimer = 0.0f;		// 次の1発までの残り時間
+	float homingBurstInterval = 0.08f;	// 連発の間隔(秒)
+	float lastHomingX = 0.0f, lastHomingY = 0.0f;	// 連発中の発射位置(機体が動いても同じ位置から出す)
 
 	int HP = 100;			// プレイヤーのHP初期値
 	int max_HP = 100;		// プレイヤーのHP最大値
@@ -101,7 +106,8 @@ private:
 	void ApplyMode();				// モードに合わせてパラメータを適用する(値を一式セット)
 	void FireVulcan(float x, float y, int count, float spreadDegree, float bulletSpeed);	//扇形に弾を発射する
 	void FireLaser(float x, float y, float bulletSpeed);	// 直線にレーザーを発射する
-	void FireHoming(float x, float y, float bulletSpeed);	// 追尾ミサイルを発射する
+	void FireHoming(float x, float y, float bulletSpeed);		// ホーミング連発をセットする
+	void SpawnOneHoming(float x, float y, float bulletSpeed);	// 実際に1発だけ生成する(連発の度に呼ばれる)
 	void UseRepairCore();	// リペアコアを1つ消費してHP全回復＋無敵時間を得る
 
 public:
@@ -115,4 +121,5 @@ public:
 	int GetHp() const { return HP; }		// class 外部からHPを参照できるようにする
 	int GetMaxHp() const { return max_HP; }	// class 外部からHPの上限を参照できるようにする
 	Mode GetMode() const { return mode; }	// class 外部から現在のモードを参照できるようにする
+	float GetLaserMuzzleOffsetY() const { return muzzleTable[WEAPON_LASER][mode].y; }	// レーザーの砲口Yオフセットを取得する(class外部からレーザーの追従位置を計算するため)
 };
