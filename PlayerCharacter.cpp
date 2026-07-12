@@ -3,6 +3,7 @@
 #include "Input.h"
 #include "Controller.h"
 #include "GameScene.h"
+#include "Log.h"
 #include <cstdlib>
 #include <cmath>// ←————————————————————————————————— cosf/sinf で角度を計算します
 
@@ -22,6 +23,8 @@ static const float VULCAN_MUZZLE_OFFSET_X = -2.0f;		//銃口のX座標 offset
 static const float VULCAN_MUZZLE_OFFSET_Y = -37.0f;	//銃口のY座標 offset
 
 static const float INVINCIBLE_DURATION = 2.0f;	// リペアコア使用後の無敵時間(秒)
+
+static const int HOMING_BURST_COUNT = 6;	// 一度の連発で発射する数
 
 //======================================================================================//
 // ApplyMode() ---> モードに合わせてパラメータを適用する(値を一式セット)				//
@@ -380,7 +383,7 @@ void PlayerCharacter::FireHoming(float x, float y, float bulletSpeed)
 {
 	if (homingShotsRemaining > 0) return;	// 連発中は新しい入力を無視する
 
-	homingShotsRemaining = 6;	// 6連発をセット
+	homingShotsRemaining = HOMING_BURST_COUNT;	// 改咗,唔再寫死 6
 	homingBurstTimer = 0.0f;	// 即座に1発目を撃てるようにする
 	lastHomingX = x;
 	lastHomingY = y;
@@ -422,6 +425,7 @@ void PlayerCharacter::SpawnOneHoming(float x, float y, float bulletSpeed,int sho
 	newMissile.TurnRate = 2500.0f + (float)(rand() % 1000);
 	newMissile.targetOrder = shotIndex / 2;
 
+	Log::Info("Homing shotIndex=%d targetOrder=%d", shotIndex, newMissile.targetOrder);
 	Chase.push_back(newMissile);
 }
 
