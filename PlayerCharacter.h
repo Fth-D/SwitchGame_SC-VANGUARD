@@ -109,7 +109,7 @@ private:
 	void FireVulcan(float x, float y, int count, float spreadDegree, float bulletSpeed);	//扇形に弾を発射する
 	void FireLaser(float x, float y, float bulletSpeed);	// 直線にレーザーを発射する
 	void FireHoming(float x, float y, float bulletSpeed);		// ホーミング連発をセットする
-	void SpawnOneHoming(float x, float y, float bulletSpeed);	// 実際に1発だけ生成する(連発の度に呼ばれる)
+	void SpawnOneHoming(float x, float y, float bulletSpeed,float shotIndex);	// 実際に1発だけ生成する(連発の度に呼ばれる)
 	void UseRepairCore();	// リペアコアを1つ消費してHP全回復＋無敵時間を得る
 
 public:

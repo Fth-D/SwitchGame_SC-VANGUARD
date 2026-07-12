@@ -3,6 +3,7 @@
 #include "Input.h"
 #include "Controller.h"
 #include "GameScene.h"
+#include <cstdlib>
 #include <cmath>// ←————————————————————————————————— cosf/sinf で角度を計算します
 
 //======================================================================================//
@@ -282,7 +283,8 @@ void PlayerCharacter::Update(float dt)
 			Float2 muzzle = muzzleTable[WEAPON_HOMING][mode];
 			float shotX = player_position.x + muzzle.x;
 			float shotY = player_position.y + muzzle.y;
-			SpawnOneHoming(shotX, shotY, bulletSpeedTable[WEAPON_HOMING]);
+			int shotIndex = HOMING_BURST_COUNT - homingShotsRemaining;
+			SpawnOneHoming(shotX, shotY, bulletSpeedTable[WEAPON_HOMING],shotIndex);
 
 			homingShotsRemaining--;
 			homingBurstTimer = homingBurstInterval;
@@ -391,10 +393,8 @@ void PlayerCharacter::FireHoming(float x, float y, float bulletSpeed)
 // FireHoming() では呼ばれない。Update() 内の連発処理から、間隔ごとに1回呼ばれる。		//
 //======================================================================================//
 
-void PlayerCharacter::SpawnOneHoming(float x, float y, float bulletSpeed)
+void PlayerCharacter::SpawnOneHoming(float x, float y, float bulletSpeed,int shotIndex)
 {
-	newMissile.myTurnRate = 2500.0f + (float)(rand() % 1000);
-	newMissile.targetOrder = shotIndex / 2;
 
 	GameObject* Homing = GameAPI.AddObject(new GameObject);
 	Homing->Activation();
@@ -412,7 +412,17 @@ void PlayerCharacter::SpawnOneHoming(float x, float y, float bulletSpeed)
 
 	Homing->SetPosition(MakeFloat3(x, y , 0.0f));
 
-	Chase.push_back({ Homing, bulletSpeed, 0.0f });
+
+	HomingMissile newMissile;
+	newMissile.obj = Homing;
+	newMissile.homingVelocityX = bulletSpeed;
+	newMissile.homingVelocityY = 0.0f;
+	newMissile.homingTimer = 0.0f;
+
+	newMissile.TurnRate = 2500.0f + (float)(rand() % 1000);
+	newMissile.targetOrder = shotIndex / 2;
+
+	Chase.push_back(newMissile);
 }
 
 void PlayerCharacter::CollisionReaction(GameObject* opponent)
