@@ -50,6 +50,8 @@ struct HomingMissile
 	GameObject* obj;						// 弾のGameObject
 	float homingVelocityX, homingVelocityY;	// ホーミングミサイルの速度ベクトル(毎秒ピクセル)
 	float homingTimer = 0.0f;				// 発射からの経過時間(段階判定に使う)
+	float TurnRate = 3000.0f;
+	int targetOrder = 0;						// 何番目に近い敵を狙うか(0=最も近い、1=2番目...)
 };
 extern std::vector<HomingMissile> Chase;	// ホーミングリストの実体は GameScene.cpp にあります。
 

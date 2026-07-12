@@ -393,6 +393,9 @@ void PlayerCharacter::FireHoming(float x, float y, float bulletSpeed)
 
 void PlayerCharacter::SpawnOneHoming(float x, float y, float bulletSpeed)
 {
+	newMissile.myTurnRate = 2500.0f + (float)(rand() % 1000);
+	newMissile.targetOrder = shotIndex / 2;
+
 	GameObject* Homing = GameAPI.AddObject(new GameObject);
 	Homing->Activation();
 	Homing->Show();
