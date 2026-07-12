@@ -3,8 +3,6 @@
 #include "Input.h"
 #include "Controller.h"
 #include "GameScene.h"
-#include "Log.h"
-#include <cstdlib>
 #include <cmath>// ←————————————————————————————————— cosf/sinf で角度を計算します
 
 //======================================================================================//
@@ -23,8 +21,6 @@ static const float VULCAN_MUZZLE_OFFSET_X = -2.0f;		//銃口のX座標 offset
 static const float VULCAN_MUZZLE_OFFSET_Y = -37.0f;	//銃口のY座標 offset
 
 static const float INVINCIBLE_DURATION = 2.0f;	// リペアコア使用後の無敵時間(秒)
-
-static const int HOMING_BURST_COUNT = 6;	// 一度の連発で発射する数
 
 //======================================================================================//
 // ApplyMode() ---> モードに合わせてパラメータを適用する(値を一式セット)				//
@@ -107,7 +103,7 @@ void PlayerCharacter::Setup(float x, float y)
 	Show();	//描画有効化
 	GetSprite().Initialize();	//スプライト初期化
 	SetObjectType(Player);	//オブジェクト分類
-	GetSprite().SetPolygonSize(MakeFloat2(150.0f, 150.0f));	//サイズ指定
+	GetSprite().SetPolygonSize(MakeFloat2(200.0f, 200.0f));	//サイズ指定
 
 	// --- 当たり判定初期化 ---
 	GenerateRectangleCollision(1);	//自身に方形の当たり判定を生成（引数で渡した分だけ作成する）
@@ -137,8 +133,8 @@ void PlayerCharacter::Setup(float x, float y)
 	muzzleTable[WEAPON_LASER][FIGHTER] = MakeFloat2(200, 0);
 	muzzleTable[WEAPON_LASER][ROBOT] = MakeFloat2(131, -30);
 
-	muzzleTable[WEAPON_HOMING][FIGHTER] = MakeFloat2(-15, 20);
-	muzzleTable[WEAPON_HOMING][ROBOT] = MakeFloat2(-30, -50);
+	muzzleTable[WEAPON_HOMING][FIGHTER] = MakeFloat2(0, 0);
+	muzzleTable[WEAPON_HOMING][ROBOT] = MakeFloat2(0, 0);
 
 	// --- 弾速表(武器だけで決まる) ---
 	bulletSpeedTable[WEAPON_VULCAN] = 2400.0f;	// Vulcanが範囲が広い
@@ -275,26 +271,6 @@ void PlayerCharacter::Update(float dt)
 	}
 
 	//--------------------------------------------------------------------------//
-	// ホーミング連発処理(セットされた発数を、間隔を空けて1発ずつ発射する)		//
-	// 各発は「発射する瞬間」の最新位置から出す(機体が動けば追従する)			//
-	//--------------------------------------------------------------------------//
-	if (homingShotsRemaining > 0)
-	{
-		homingBurstTimer -= dt;
-		if (homingBurstTimer <= 0.0f)
-		{
-			Float2 muzzle = muzzleTable[WEAPON_HOMING][mode];
-			float shotX = player_position.x + muzzle.x;
-			float shotY = player_position.y + muzzle.y;
-			int shotIndex = HOMING_BURST_COUNT - homingShotsRemaining;
-			SpawnOneHoming(shotX, shotY, bulletSpeedTable[WEAPON_HOMING],shotIndex);
-
-			homingShotsRemaining--;
-			homingBurstTimer = homingBurstInterval;
-		}
-	}
-
-	//--------------------------------------------------------------------------//
 	// 4）基底Update()を呼ぶ													//
 	// 当たり判定の同期＋アニメーションを進める（呼ばないとアニメが止める		//
 	//--------------------------------------------------------------------------//
@@ -373,60 +349,39 @@ void PlayerCharacter::FireLaser(float x, float y, float bulletSpeed)
 }
 
 //======================================================================================//
-//	FireHoming: ホーミング連発をセットする												//
+//	FireHoming: 敵追尾									 								//
 //--------------------------------------------------------------------------------------//
-// 実際の発射はUpdate()内で1発ずつ行う(連発間隔を空けるため)。							//
-// 連発中に再度呼ばれても、現在の連発が終わるまで新しい連発は開始しない。				//
+// 2発同時に発射する。初期位置を少しずらすことで、重なって見えないようにする。			//
+// 各発は独立してChaseリストに追加され、GameScene側で各自最も近い敵を追う。				//
 //======================================================================================//
-
 void PlayerCharacter::FireHoming(float x, float y, float bulletSpeed)
 {
-	if (homingShotsRemaining > 0) return;	// 連発中は新しい入力を無視する
+	static const int HOMING_SHOT_COUNT = 8;			// 一度に発射する数
+	static const float HOMING_SPAWN_OFFSET_Y = 15.0f;	// 各発の初期Y位置のずれ幅
 
-	homingShotsRemaining = HOMING_BURST_COUNT;	// 改咗,唔再寫死 6
-	homingBurstTimer = 0.0f;	// 即座に1発目を撃てるようにする
-	lastHomingX = x;
-	lastHomingY = y;
+	for (int i = 0; i < HOMING_SHOT_COUNT; i++)
+	{
+		// i=0 なら上にずらす、i=1 なら下にずらす(2発の場合)
+		float offsetY = (i == 0) ? -HOMING_SPAWN_OFFSET_Y : HOMING_SPAWN_OFFSET_Y;
 
-}
+		GameObject* Homing = GameAPI.AddObject(new GameObject);
+		Homing->Activation();
+		Homing->Show();
+		Homing->GetSprite().Initialize();
+		Homing->SetObjectType(Bullet);
+		Homing->GetSprite().LoadTexture("rom:/texture/Object/PlayerBullet/Vulcan.tga");
+		Homing->GetSprite().DivideAnimationCells(1, 1);
+		Homing->GetSprite().CreateAnimation("Homing", 0, 0);
+		Homing->GetSprite().SetAnimation("Homing");
+		Homing->GetSprite().SetPolygonSize(MakeFloat2(20.0f, 20.0f));
 
-//======================================================================================//
-//	SpawnOneHoming: ホーミング弾を実際に1発だけ生成する									//
-//--------------------------------------------------------------------------------------//
-// FireHoming() では呼ばれない。Update() 内の連発処理から、間隔ごとに1回呼ばれる。		//
-//======================================================================================//
+		Homing->GenerateRectangleCollision(1);
+		Homing->SetRectangleParameter(0, MakeFloat2(0, 0), MakeFloat2(20.0f, 20.0f));
 
-void PlayerCharacter::SpawnOneHoming(float x, float y, float bulletSpeed,int shotIndex)
-{
+		Homing->SetPosition(MakeFloat3(x, y + offsetY, 0.0f));	// Y座標をずらして生成
 
-	GameObject* Homing = GameAPI.AddObject(new GameObject);
-	Homing->Activation();
-	Homing->Show();
-	Homing->GetSprite().Initialize();
-	Homing->SetObjectType(Bullet);
-	Homing->GetSprite().LoadTexture("rom:/texture/Object/PlayerBullet/Vulcan.tga");
-	Homing->GetSprite().DivideAnimationCells(1, 1);
-	Homing->GetSprite().CreateAnimation("Homing", 0, 0);
-	Homing->GetSprite().SetAnimation("Homing");
-	Homing->GetSprite().SetPolygonSize(MakeFloat2(20.0f, 20.0f));
-
-	Homing->GenerateRectangleCollision(1);
-	Homing->SetRectangleParameter(0, MakeFloat2(0, 0), MakeFloat2(20.0f, 20.0f));
-
-	Homing->SetPosition(MakeFloat3(x, y , 0.0f));
-
-
-	HomingMissile newMissile;
-	newMissile.obj = Homing;
-	newMissile.homingVelocityX = bulletSpeed;
-	newMissile.homingVelocityY = 0.0f;
-	newMissile.homingTimer = 0.0f;
-
-	newMissile.TurnRate = 2500.0f + (float)(rand() % 1000);
-	newMissile.targetOrder = shotIndex / 2;
-
-	Log::Info("Homing shotIndex=%d targetOrder=%d", shotIndex, newMissile.targetOrder);
-	Chase.push_back(newMissile);
+		Chase.push_back({ Homing, bulletSpeed, 0.0f });
+	}
 }
 
 void PlayerCharacter::CollisionReaction(GameObject* opponent)
