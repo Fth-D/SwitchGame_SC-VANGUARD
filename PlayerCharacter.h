@@ -50,8 +50,8 @@ struct HomingMissile
 	GameObject* obj;						// 弾のGameObject
 	float homingVelocityX, homingVelocityY;	// ホーミングミサイルの速度ベクトル(毎秒ピクセル)
 	float homingTimer = 0.0f;				// 発射からの経過時間(段階判定に使う)
-	float TurnRate = 3000.0f;
-	int targetOrder = 0;						// 何番目に近い敵を狙うか(0=最も近い、1=2番目...)
+	float TurnRate = 3000.0f;				// このミサイル専用の旋回の強さ(発ごとに少し違う値になる)
+	int targetOrder = 0;					// 何番目に近い敵を狙うか(0=最も近い、1=2番目...)
 };
 extern std::vector<HomingMissile> Chase;	// ホーミングリストの実体は GameScene.cpp にあります。
 
@@ -109,7 +109,7 @@ private:
 	void FireVulcan(float x, float y, int count, float spreadDegree, float bulletSpeed);	//扇形に弾を発射する
 	void FireLaser(float x, float y, float bulletSpeed);	// 直線にレーザーを発射する
 	void FireHoming(float x, float y, float bulletSpeed);		// ホーミング連発をセットする
-	void SpawnOneHoming(float x, float y, float bulletSpeed,float shotIndex);	// 実際に1発だけ生成する(連発の度に呼ばれる)
+	void SpawnOneHoming(float x, float y, float bulletSpeed,int shotIndex);	// 実際に1発だけ生成する(連発の度に呼ばれる)
 	void UseRepairCore();	// リペアコアを1つ消費してHP全回復＋無敵時間を得る
 
 public:
