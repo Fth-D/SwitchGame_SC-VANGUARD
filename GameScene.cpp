@@ -135,28 +135,6 @@ void Game::InitializeGame()			// ここにゲームシーン初期化コード�
 
 void Game::UpdateGame(float dt)		// ここにゲームシーン更新コードを書く
 {
-	if (UI_Frame != nullptr)
-	{
-		DeleteObject(UI_Frame);
-	}
-
-	UI_Frame = AddObject(new GameObject);
-	UI_Frame->Activation();
-	UI_Frame->Show();
-	UI_Frame->GetSprite().Initialize();
-	UI_Frame->SetObjectType(UI);
-	UI_Frame->SetPosition(MakeFloat3(0.0f, 0.0f, 0.0f));
-	UI_Frame->GetSprite().SetPolygonSize(MakeFloat2(1920.0f, 1080.0f));
-	UI_Frame->GetSprite().LoadTexture("rom:/texture/UI/UI_test.tga");
-	UI_Frame->GetSprite().DivideAnimationCells(1, 1);
-	UI_Frame->GetSprite().CreateAnimation("UI_frame", 0, 0);
-	UI_Frame->GetSprite().SetAnimation("UI_frame");
-	// ★ 加呢句:打印UI嘅objectId,同場上敵人數量、第一隻敵人嘅objectId
-	Log::Info("UI_Frame id=%d | Enemies count=%d", UI_Frame->GetObjectId(), (int)Enemies.size());
-	if (Enemies.size() > 0)
-	{
-		Log::Info("First enemy id=%d", Enemies[0]->GetObjectId());
-	}
 	//----------------------------------------------------------------------------------//
 	//	プレイヤーの更新																//
 	//----------------------------------------------------------------------------------//
@@ -525,31 +503,6 @@ void Game::UpdateGame(float dt)		// ここにゲームシーン更新コード�
 			Enemies.erase(Enemies.begin() + i);	//すでに死んだ敵に Enemies と言うリストから外しなさい
 		}
 	}
-
-	if (UI_Frame != nullptr)
-	{
-		DeleteObject(UI_Frame);
-	}
-
-	GameObject* dummy = AddObject(new GameObject);	// UIの旧slotを埋めるためのダミー
-	dummy->Deactivation();
-	dummy->Hide();
-
-	UI_Frame = AddObject(new GameObject);	// これで新しい(より大きい)slotを取得できるはず
-	UI_Frame->Activation();
-	UI_Frame->Show();
-	UI_Frame->GetSprite().Initialize();
-	UI_Frame->SetObjectType(UI);
-	UI_Frame->SetPosition(MakeFloat3(0.0f, 0.0f, 0.0f));
-	UI_Frame->GetSprite().SetPolygonSize(MakeFloat2(1920.0f, 1080.0f));
-	UI_Frame->GetSprite().LoadTexture("rom:/texture/UI/UI_test.tga");
-	UI_Frame->GetSprite().DivideAnimationCells(1, 1);
-	UI_Frame->GetSprite().CreateAnimation("UI_frame", 0, 0);
-	UI_Frame->GetSprite().SetAnimation("UI_frame");
-
-	DeleteObject(dummy);	// 役目を終えたので削除する
-
-	Log::Info("UI_Frame id=%d | Enemies count=%d", UI_Frame->GetObjectId(), (int)Enemies.size());
 }
 
 void Game::DrawGame()				// ここにゲームシーン描画コードを書く
