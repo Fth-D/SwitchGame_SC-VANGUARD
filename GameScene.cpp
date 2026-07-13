@@ -506,16 +506,6 @@ void Game::UpdateGame(float dt)		// ここにゲームシーン更新コード�
 		}
 	}
 
-	RefreshUIToFront();
-}
-
-void Game::DrawGame()				// ここにゲームシーン描画コードを書く
-{
-
-}
-
-void Game::RefreshUIToFront()
-{
 	if (UI_Frame != nullptr)
 	{
 		DeleteObject(UI_Frame);
@@ -528,8 +518,13 @@ void Game::RefreshUIToFront()
 	UI_Frame->SetObjectType(UI);
 	UI_Frame->SetPosition(MakeFloat3(0.0f, 0.0f, 0.0f));
 	UI_Frame->GetSprite().SetPolygonSize(MakeFloat2(1920.0f, 1080.0f));
-	UI_Frame->GetSprite().LoadTexture("rom:/texture/UI/UI_test.tga");	// キャッシュ済みなので毎回読み込んでも軽い
+	UI_Frame->GetSprite().LoadTexture("rom:/texture/UI/UI_test.tga");
 	UI_Frame->GetSprite().DivideAnimationCells(1, 1);
 	UI_Frame->GetSprite().CreateAnimation("UI_frame", 0, 0);
 	UI_Frame->GetSprite().SetAnimation("UI_frame");
+}
+
+void Game::DrawGame()				// ここにゲームシーン描画コードを書く
+{
+
 }
