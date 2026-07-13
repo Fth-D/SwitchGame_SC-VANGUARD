@@ -318,7 +318,8 @@ void Game::UpdateGame(float dt)		// ここにゲームシーン更新コード�
 		Homing->UpdateCollision();
 
 		bool remove = false;
-
+		
+		/*
 		// ----- Enemies に当たった？ -----
 		for (int j = (int)Enemies.size() - 1; j >= 0; j--)
 		{
@@ -334,6 +335,7 @@ void Game::UpdateGame(float dt)		// ここにゲームシーン更新コード�
 				break;
 			}
 		}
+		*/
 
 		// ----- 画面外に出たら回収 -----
 		if (bulletPosition.x > 1200.0f || bulletPosition.y > 1400.0f || bulletPosition.y < -1400.0f)
@@ -394,7 +396,7 @@ void Game::UpdateGame(float dt)		// ここにゲームシーン更新コード�
 		//==================================================================================================//
 		bool enemyStillAlive = true;	//今、敵が生きている(True)
 
-		// ---- Vulcan/Laser 弾に当たった？ ---- 
+		// ---- Vulcan 弾に当たった？ ----
 		for (int j = (int)Spread.size() - 1; j >= 0; j--)
 		{
 			VulcanBullet& bullet = Spread[j];
@@ -410,7 +412,43 @@ void Game::UpdateGame(float dt)		// ここにゲームシーン更新コード�
 				break;
 			}
 		}
+		
+		// ---- Laser 弾に当たった？（貫通：remove しない、毎フレーム判定し続ける） ----
+		if (enemyStillAlive == true)
+		{
+			for (int j = (int)Straight.size() - 1; j >= 0; j++)
+			{
+				LaserBeam& beam = Straight[j];
+				const Rectangle* bulletRect = beam.obj->GetRectangleCollision(0);
+				const Rectangle* enemyRect = enemy->GetRectangleCollision(0);
 
+				if (bulletRect&&enemyRect&&CheckRectangleCollision(*bulletRect,*enemyRect))
+				{
+					enemy->TakeDamage(0.1);
+					enemyStillAlive = enemy->GetObjectActiveState();
+					if (enemyStillAlive == false)break;				}
+			}
+		}
+
+		// ---- Homing 弾に当たった？ ----
+		if (enemyStillAlive==true)
+		{
+			for (int j = (int)Chase.size()-1; j >=0 ; j++)
+			{
+				HomingMissile& missile = Chase[j];
+				const Rectangle* bulletRect = missile.obj->GetRectangleCollision(0);
+				const Rectangle* enemyRect = enemy->GetRectangleCollision(0);
+
+				if (bulletRect&&enemyRect&&CheckRectangleCollision(*bulletRect,*enemyRect))
+				{
+					enemy->TakeDamage(1);
+					DeleteObject(missile.obj);
+					Chase.erase(Chase.begin() + j);
+					enemyStillAlive = enemy->GetObjectActiveState();
+					break;
+				}
+			}
+		}
 
 		// ----- プレイヤーに当たった？（敵がまだ生きている時だけチェックする） -----
 		if (enemyStillAlive == true)
