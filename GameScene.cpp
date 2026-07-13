@@ -9,6 +9,7 @@
 #include <cstdlib>
 #include <vector>	// rand() を使うため
 #include <cmath>	// Homingのどこで使う
+
 //======================================================================================//
 // 弾リストの実体																		//
 //--------------------------------------------------------------------------------------//
@@ -22,7 +23,7 @@ std::vector<HomingMissile> Chase;
 std::vector<EnemyCharacter*>Enemies;	// 敵リスト
 float enemySpawnTimer = 2.0f;	// 次の敵出現までの時間（最初の１体は２秒後）
 
-GameState gameState = PLAYING;   // ← 呢句應該喺度,但你冧寫過
+GameState gameState = PLAYING;
 
 GameObject* UI_Frame = nullptr;	//UIフレーム
 
