@@ -133,8 +133,8 @@ void PlayerCharacter::Setup(float x, float y)
 	muzzleTable[WEAPON_LASER][FIGHTER] = MakeFloat2(200, 0);
 	muzzleTable[WEAPON_LASER][ROBOT] = MakeFloat2(131, -30);
 
-	muzzleTable[WEAPON_HOMING][FIGHTER] = MakeFloat2(0, 0);
-	muzzleTable[WEAPON_HOMING][ROBOT] = MakeFloat2(0, 0);
+	muzzleTable[WEAPON_HOMING][FIGHTER] = MakeFloat2(-15, 20);
+	muzzleTable[WEAPON_HOMING][ROBOT] = MakeFloat2(-30, -50);
 
 	// --- 弾速表(武器だけで決まる) ---
 	bulletSpeedTable[WEAPON_VULCAN] = 2400.0f;	// Vulcanが範囲が広い
