@@ -4,7 +4,7 @@
 // 敵が消える範囲（この外に出たら自分で回収する）								//
 //==============================================================================//
 
-static const float ENEMY_DESPAWN = -900.0f;	// これより左(X座標)に出たら自分で消える（despawn する）
+static const float ENEMY_DESPAWN = -2200.0f;	// これより左(X座標)に出たら自分で消える（despawn する）
 
 //==============================================================================//
 // Setup：敵の初期化（画像・当たり判定・位置・速度・HP）						//
@@ -21,8 +21,8 @@ void EnemyCharacter::Setup(float Enemy_posX, float Enemy_posY, float Enemy_sizeX
 
 	GetSprite().LoadTexture(texturePath);	//画像読み込む
 	GetSprite().DivideAnimationCells(Colums, Rows); //分割
-	GetSprite().CreateAnimation("EnemyAnim", 0, Colums-1); //アニメーションを作成
-	GetSprite().SetAnimationFrameTime("EnemyAnim", (Colums/10.0f));
+	GetSprite().CreateAnimation("EnemyAnim", 0, Colums - 1); //アニメーションを作成
+	GetSprite().SetAnimationFrameTime("EnemyAnim", (Colums / 10.0f));
 	GetSprite().SetAnimation("EnemyAnim"); //アニメーションを指定
 
 	GetSprite().SetPolygonSize(MakeFloat2(Enemy_sizeX, Enemy_sizeY));	//サイズ

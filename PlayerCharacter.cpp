@@ -207,7 +207,7 @@ void PlayerCharacter::Update(float dt)
 			FireLaser(muzzleX, muzzleY, currentBulletSpeed);		//	
 			break;
 		case WEAPON_HOMING:
-			FireHoming(muzzleX, muzzleY, currentBulletSpeed);	
+			FireHoming(muzzleX, muzzleY, currentBulletSpeed);
 			break;
 		case WEAPON_COUNT:
 			break;
@@ -265,7 +265,7 @@ void PlayerCharacter::Update(float dt)
 	//--------------------------------------------------------------------------//
 	// 無敵時間のカウントダウン													//
 	//--------------------------------------------------------------------------//
-	if (invincibleTimer>0.0f)
+	if (invincibleTimer > 0.0f)
 	{
 		invincibleTimer -= dt;
 	}

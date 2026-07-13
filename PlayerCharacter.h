@@ -41,6 +41,7 @@ struct LaserBeam
 {
 	GameObject* obj;						// 弾のGameObject
 	float laserVelocityX, laserVelocityY;	// レーザーの速度ベクトル(毎秒ピクセル)
+	bool FollowPlayer_posY = true;
 };
 extern std::vector<LaserBeam> Straight;		// レーザーリストの実体は GameScene.cpp にあります
 
@@ -48,7 +49,7 @@ struct HomingMissile
 {
 	GameObject* obj;						// 弾のGameObject
 	float homingVelocityX, homingVelocityY;	// ホーミングミサイルの速度ベクトル(毎秒ピクセル)
-	float homingTimer = 0.0f;				// 発射からの経過時間(段階判定に使う)
+	float phaseTimer = 0.0f;				// 発射からの経過時間(段階判定に使う)
 };
 extern std::vector<HomingMissile> Chase;	// ホーミングリストの実体は GameScene.cpp にあります。
 
@@ -115,4 +116,6 @@ public:
 	int GetHp() const { return HP; }		// class 外部からHPを参照できるようにする
 	int GetMaxHp() const { return max_HP; }	// class 外部からHPの上限を参照できるようにする
 	Mode GetMode() const { return mode; }	// class 外部から現在のモードを参照できるようにする
+
+	float GetLaserMuzzleOffsetY() const { return muzzleTable[WEAPON_LASER][mode].y; }	// class外部からレーザーの砲口Yオフセットを取得する
 };
