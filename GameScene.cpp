@@ -225,6 +225,7 @@ void Game::UpdateGame(float dt)		// ここにゲームシーン更新コード�
 		{
 			posA.x = posB.x + bg_TextureWidth;
 		}
+
 		if (posB.x+bg_TextureWidth*0.5f<0.0f)
 		{
 			posB.x = posA.x + bg_TextureWidth;
