@@ -90,6 +90,7 @@
     <ClInclude Include="Framework\Text.h" />
     <ClInclude Include="Framework\texture.h" />
     <ClInclude Include="Framework\GameTime.h" />
+    <ClInclude Include="TextEffects.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EnemyCharacter.cpp" />
@@ -120,6 +121,7 @@
     <ClCompile Include="SampleScene.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="TextEffects.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{C6AA153E-F76D-440E-8BAA-51E458D71105}</ProjectGuid>

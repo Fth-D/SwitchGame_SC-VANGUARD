@@ -1,0 +1,98 @@
+#include "TextEffects.h"
+#include <cstdlib>	// rand() を使うため
+
+//======================================================================================//
+// 点滅（フェードイン・フェードアウト）												//
+//======================================================================================//
+float GetFadeAlpha(float timer, float speed)
+{
+	return 0.5f + 0.5f * sinf(timer * speed);
+}
+
+//======================================================================================//
+// 震動オフセット																		//
+//======================================================================================//
+Float2 GetShakeOffset(float intensity)
+{
+	float ox = (float)(rand() % 200 - 100) / 100.0f * intensity;
+	float oy = (float)(rand() % 200 - 100) / 100.0f * intensity;
+	return MakeFloat2(ox, oy);
+}
+
+//======================================================================================//
+// 色の線形補間																			//
+//======================================================================================//
+Float3 LerpColor(Float3 colorA, Float3 colorB, float t)
+{
+	if (t < 0.0f) t = 0.0f;
+	if (t > 1.0f) t = 1.0f;
+
+	Float3 result;
+	result.x = colorA.x + (colorB.x - colorA.x) * t;
+	result.y = colorA.y + (colorB.y - colorA.y) * t;
+	result.z = colorA.z + (colorB.z - colorA.z) * t;
+	return result;
+}
+
+//======================================================================================//
+// HP割合に応じた色（呼吸効果込み）													//
+//--------------------------------------------------------------------------------------//
+// 50%以上：呼吸する2色の青、50～25%：黄色、25%以下：赤							 	//
+//======================================================================================//
+Float3 GetHpDisplayColor(float hpPercent, float breatheTimer)
+{
+	Float3 cyanA = MakeFloat3(0.18f, 0.88f, 0.84f);
+	Float3 cyanB = MakeFloat3(0.35f, 0.65f, 0.95f);
+	Float3 yellow = MakeFloat3(0.95f, 0.85f, 0.20f);
+	Float3 red = MakeFloat3(0.89f, 0.29f, 0.29f);
+
+	if (hpPercent > 0.5f)
+	{
+		float breathe = 0.5f + 0.5f * sinf(breatheTimer * 3.0f);
+		return LerpColor(cyanA, cyanB, breathe);
+	}
+	else if (hpPercent > 0.25f)
+	{
+		return yellow;
+	}
+	else
+	{
+		return red;
+	}
+}
+
+//======================================================================================//
+// グリッチ・フリッカー																	//
+//--------------------------------------------------------------------------------------//
+// 通常は1.0（フルの明るさ）を返すが、glitchChanceの確率でランダムに低輝度になる		//
+// 「信号が不安定なHUD」の演出に使う													//
+//======================================================================================//
+float GetGlitchFlicker(float timer, float glitchChance)
+{
+	float noise = (float)(rand() % 1000) / 1000.0f;	// 0.0～1.0のランダム値を毎回作る
+
+	if (noise < glitchChance)
+	{
+		return 0.3f + noise;	// 確率に当たったら、短時間だけ暗く落とす
+	}
+
+	return 1.0f;	// 通常時は満輝度
+}
+
+//======================================================================================//
+// 残像用のアルファ値																	//
+//--------------------------------------------------------------------------------------//
+// 数値が変化してからどれだけ時間が経ったかを見て、フェードアウトする透明度を返す		//
+// timeSinceChange=0のとき最も濃く、fadeDurationが経つと透明(0.0)になる					//
+//======================================================================================//
+float GetAfterimageAlpha(float timeSinceChange, float fadeDuration)
+{
+	if (fadeDuration <= 0.0f) return 0.0f;	// 0除算を防ぐ安全策
+
+	float alpha = 1.0f - (timeSinceChange / fadeDuration);
+
+	if (alpha < 0.0f) alpha = 0.0f;
+	if (alpha > 1.0f) alpha = 1.0f;
+
+	return alpha;
+}

@@ -465,9 +465,9 @@ void Game::Initialize()
 	Time::Initialize();
 	Log::Trace("Text::Initialize...");
 #if PLATFORM_NX
-	Text::Initialize("rom:/Fonts/msgothic.ttc");
+	Text::Initialize("rom:/Fonts/ROG_regular.ttc");
 #else
-	Text::Initialize("C:/Windows/Fonts/msgothic.ttc");
+	Text::Initialize("C:/Windows/Fonts/ROG_regular.ttc");
 #endif
 	InitController();
 	Input::Initialize();
