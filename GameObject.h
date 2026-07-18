@@ -17,7 +17,7 @@ enum ObjectType
 	Enemy = 2,
 	Bullet = 3,
 	Other = 4,
-
+	Background = 5,
 	TYPE_OF_OBJECTTYPE,
 };
 
