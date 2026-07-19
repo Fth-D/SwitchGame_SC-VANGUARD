@@ -44,7 +44,7 @@ Float3 GetHpDisplayColor(float hpPercent, float breatheTimer)
 	Float3 cyanA = MakeFloat3(0.18f, 0.88f, 0.84f);
 	Float3 cyanB = MakeFloat3(0.35f, 0.65f, 0.95f);
 	Float3 yellow = MakeFloat3(0.95f, 0.85f, 0.20f);
-	Float3 red = MakeFloat3(0.89f, 0.29f, 0.29f);
+	Float3 red = MakeFloat3(1.0f, 0.19f, 0.19f);
 
 	if (hpPercent > 0.5f)
 	{

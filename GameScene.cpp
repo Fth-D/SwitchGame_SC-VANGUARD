@@ -659,7 +659,7 @@ void Game::UpdateGame(float dt)		// ここにゲームシーン更新コード�
 				SetControllerLeftVibration(0.5f, 0.1f);
 
 				enemy->TakeDamage(999);
-				Vanguard->TakeDamage(34);
+				Vanguard->TakeDamage(30);
 
 				if (Vanguard->IsGameOver())
 				{
@@ -698,38 +698,66 @@ void Game::DrawGame()				// ここにゲームシーン描画コードを書く
 	//--------------------------------------------------------------------------------------//
 
 
-
 	if (HP_Bar_Layer2 != nullptr)
 	{
 		HP_Bar_Layer2->Draw();
 	}
-
+	
 	if (HP_Bar_Layer1 != nullptr)
 	{
 		HP_Bar_Layer1->Draw();
 	}
-
+	
 	if (UI_Frame != nullptr)
 	{
 		UI_Frame->Draw();
 	}
+
+
+	Text::SetColor(0.42f, 0.72f, 0.87f, 0.8f);
+	Text::Draw("TRANSFORM", 65.0f, 330.0f, 22.5f);
+
+	Text::SetColor(0.42f, 0.72f, 0.87f, 0.8f);
+	Text::Draw("WEAPON", 92.0f, 503.0f, 22.5f);
+
+	Text::SetColor(0.42f, 0.72f, 0.87f, 0.8f);
+	Text::Draw("BEAM", 54.0f, 545.0f, 22.5f);
+	Text::Draw("CANNON", 54.0f, 562.0f, 22.5f);
+
+	Text::SetColor(0.42f, 0.72f, 0.87f, 0.8f);
+	Text::Draw("VULCAN", 54.0f, 662.0f, 22.5f);
+	Text::SetColor(0.42f, 0.72f, 0.87f, 0.8f);
+	Text::Draw(" ", 54.0f, 680.0f, 22.5f);
+
+	Text::SetColor(0.42f, 0.72f, 0.87f, 0.8f);
+	Text::Draw("HOMING", 54.0f, 782.0f, 22.5f);
+	Text::SetColor(0.42f, 0.72f, 0.87f, 0.8f);
+	Text::Draw("MISSLE", 54.0f, 800.0f, 22.5f);
 
 	int hpDisplayInt = (int)(HP_Layer1_DisplayPercent * 100.0f + 0.5f);
 	char hpText[16];
 	snprintf(hpText, sizeof(hpText), "%d%", hpDisplayInt);
 	
 	Float3 hpColor = GetHpDisplayColor(HP_Layer1_DisplayPercent, HP_BreatheTimer);
+	
 	Text::SetColor(hpColor.x, hpColor.y, hpColor.z, 1.0f);
-	Text::Draw(hpText, 89.5f, 130.0f, 28.0f);
+	Text::Draw("Armor Integrity", 182.5f, 32.5f, 30.0f);
+
+	Text::SetColor(hpColor.x, hpColor.y, hpColor.z, 1.0f);
+	Text::Draw(hpText, 255.0f, 41.5f, 68.0f);
+
+	Text::SetColor(hpColor.x, hpColor.y, hpColor.z, 1.0f);
+	Text::Draw("%", 382.5f, 41.5f, 68.0f);
+
 
 	if (Vanguard!=nullptr)
 	{
 		Text::SetColor(0.62f, 0.82f, 0.87f, 1.0f);	//
-		Text::Draw("x", 154.0f, 967.0f, 24.0f);
+		Text::Draw("x", 145.0f, 968.0f, 36.0f);
 
 		char repairCoreText[8];
 		snprintf(repairCoreText, sizeof(repairCoreText), "%d%", Vanguard->GetRepairCore());
-		Text::Draw(repairCoreText, 190.0f, 967.0f, 24.0f);
+		Text::Draw(repairCoreText, 180.0f, 947.5f, 65.0f);
 	}
 
 	//--------------------------------------------------------------------------------------//
