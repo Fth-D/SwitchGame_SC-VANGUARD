@@ -60,6 +60,8 @@ float HP_Layer2_DisplayPrecent = 1.0f;
 float HP_Layer2_CatchUpSpeed = 2.5f;
 float HP_Layer2_HealCatchUpSpeed = 12.0f;
 
+float HP_BreatheTimer = 0.0f;	// ARMOR文字の呼吸・脈動エフェクト用タイマー
+
 void Game::InitializeGame()			// ここにゲームシーン初期化コードを書く
 {
 	//======================================================================================//
@@ -695,13 +697,7 @@ void Game::DrawGame()				// ここにゲームシーン描画コードを書く
 	// 描画順の不安定さを回避できる。														//
 	//--------------------------------------------------------------------------------------//
 
-	int hpDisplayInt = (int)(HP_Layer1_DisplayPercent * 100.0f + 0.5f);
-	char hpText[16];
-	snprintf(hpText, sizeof(hpText), "%d%", hpDisplayInt);
-	
-	Float3 hpColor = GetHpDisplayColor(HP_Layer1_DisplayPercent, HP_BreatheTimer);
-	Text::SetColor(hpColor.x, hpColor.y, hpColor.z, 1.0f);
-	Text::Draw(hpText, 89.5f, 130.0f, 28.0f);
+
 
 	if (HP_Bar_Layer2 != nullptr)
 	{
@@ -718,6 +714,23 @@ void Game::DrawGame()				// ここにゲームシーン描画コードを書く
 		UI_Frame->Draw();
 	}
 
+	int hpDisplayInt = (int)(HP_Layer1_DisplayPercent * 100.0f + 0.5f);
+	char hpText[16];
+	snprintf(hpText, sizeof(hpText), "%d%", hpDisplayInt);
+	
+	Float3 hpColor = GetHpDisplayColor(HP_Layer1_DisplayPercent, HP_BreatheTimer);
+	Text::SetColor(hpColor.x, hpColor.y, hpColor.z, 1.0f);
+	Text::Draw(hpText, 89.5f, 130.0f, 28.0f);
+
+	if (Vanguard!=nullptr)
+	{
+		Text::SetColor(0.62f, 0.82f, 0.87f, 1.0f);	//
+		Text::Draw("x", 154.0f, 967.0f, 24.0f);
+
+		char repairCoreText[8];
+		snprintf(repairCoreText, sizeof(repairCoreText), "%d%", Vanguard->GetRepairCore());
+		Text::Draw(repairCoreText, 190.0f, 967.0f, 24.0f);
+	}
 
 	//--------------------------------------------------------------------------------------//
 	// 今後ここに追加予定のもの（同じ仕組みを使う）											//

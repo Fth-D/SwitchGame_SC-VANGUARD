@@ -113,9 +113,10 @@ public:
 	void TakeDamage(int damage);	// ダメージを受ける(無敵中は無効。HPが0以下でリペアコアを自動使用)
 	bool IsGameOver()const;	// HPが0以下、かつリペアコアも尽きたかどうか
 
-	int GetHp() const { return HP; }		// class 外部からHPを参照できるようにする
-	int GetMaxHp() const { return max_HP; }	// class 外部からHPの上限を参照できるようにする
-	Mode GetMode() const { return mode; }	// class 外部から現在のモードを参照できるようにする
+	int GetHp() const { return HP; }					// class 外部からHPを参照できるようにする
+	int GetMaxHp() const { return max_HP; }				// class 外部からHPの上限を参照できるようにする
+	Mode GetMode() const { return mode; }				// class 外部から現在のモードを参照できるようにする
+	int GetRepairCore() const { return repairCore; }	// class 外部から修復コーアの持ち数
 
 	float GetLaserMuzzleOffsetY() const { return muzzleTable[WEAPON_LASER][mode].y; }	// class外部からレーザーの砲口Yオフセットを取得する
 };
