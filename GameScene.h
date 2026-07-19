@@ -10,3 +10,6 @@ enum GameState
 	PAUSED,		// 一時停止中(Pauseボタンで発生、GameSceneの更新を凍結する)
 	TRANSITION,	// ステージ切り替え中(次のレベルへ移行する演出)
 };
+float HP_BreatheTimer = 0.0f;
+
+extern float HP_BreatheTimer;
