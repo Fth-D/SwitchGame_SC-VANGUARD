@@ -10,13 +10,6 @@ enum WeaponType	// 武器の種類
 	WEAPON_COUNT,	// ←--- 武器の総数		（ count 用 ）
 };
 
-enum class MechStatus 
-{ 
-	Nominal,	//
-	Caution,	//
-	Danger		//
-};
-
 //======================================================================================//
 //  弾（VulcanBullet）構造体 ------> 弾（Vulcan）1発分のデータ							//
 //--------------------------------------------------------------------------------------//
@@ -79,6 +72,13 @@ public:
 		ROBOT,
 		FIGHTER,
 		MODE_COUNT	// ← 形態の総数
+	};
+
+	enum class MechStatus
+	{
+		Nominal,
+		Caution,
+		Danger
 	};
 
 private:
