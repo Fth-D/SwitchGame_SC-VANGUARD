@@ -60,7 +60,35 @@ float HP_Layer2_DisplayPrecent = 1.0f;
 float HP_Layer2_CatchUpSpeed = 2.5f;
 float HP_Layer2_HealCatchUpSpeed = 12.0f;
 
-float HP_BreatheTimer = 0.0f;	// ARMOR文字の呼吸・脈動エフェクト用タイマー
+float HP_BreatheTimer = 0.0f;		// ARMOR文字の呼吸・脈動エフェクト用タイマー
+float UI_GlitchTimer = 0.0f;
+float HP_RedFlickerSpeed = 12.0f;	// 危険状態のとき（赤）の点滅速度。大きいほど激しく点滅する
+float HP_BreatheScpped = 3.0f;		// 安全状態のとき（青）の呼吸速度
+
+Float3 ComputeHpColor(PlayerCharacter::MechStatus status, float breatheTimer, float* outAlpha)
+{
+	Float3 cyanA = MakeFloat3(0.18f, 0.88f, 0.84f);
+	Float3 cyanB = MakeFloat3(0.35f, 0.65f, 0.95f);
+	Float3 yellow = MakeFloat3(0.95f, 0.85f, 0.20f);
+	Float3 red = MakeFloat3(1.00f, 0.19f, 0.19f);
+
+	if (status == PlayerCharacter::MechStatus::Nominal)
+	{
+		float breathe = 0.5f + 0.5f * sinf(breatheTimer * HP_BreatheSpeed);
+		*outAlpha = 1.0f;
+		return LerpColor(cyanA, cyanB, breathe);
+	}
+	else if (status == PlayerCharacter::MechStatus::Caution)
+	{
+		*outAlpha = 1.0f;
+		return yellow;
+	}
+	else	// MechStatus::Danger
+	{
+		*outAlpha = GetFadeAlpha(breatheTimer, HP_RedFlickerSpeed);
+		return red;
+	}
+}
 
 void Game::InitializeGame()			// ここにゲームシーン初期化コードを書く
 {
@@ -226,6 +254,7 @@ void Game::UpdateGame(float dt)		// ここにゲームシーン更新コード�
 	//																					//
 	//----------------------------------------------------------------------------------//
 	HP_BreatheTimer += dt;
+	UI_GlitchTimer += dt;
 
 	//----------------------------------------------------------------------------------//
 	//	背景の更新																		//
@@ -713,25 +742,23 @@ void Game::DrawGame()				// ここにゲームシーン描画コードを書く
 		UI_Frame->Draw();
 	}
 
+	float glitchAlpha = GetGlitchFlicker(UI_GlitchTimer, UI_GlitchChance);
 
-	Text::SetColor(0.42f, 0.72f, 0.87f, 0.8f);
+	Text::SetColor(0.42f, 0.72f, 0.87f, 0.8f * glitchAlpha);
 	Text::Draw("TRANSFORM", 65.0f, 330.0f, 22.5f);
 
-	Text::SetColor(0.42f, 0.72f, 0.87f, 0.8f);
+	Text::SetColor(0.42f, 0.72f, 0.87f, 0.8f * glitchAlpha);
 	Text::Draw("WEAPON", 92.0f, 503.0f, 22.5f);
 
-	Text::SetColor(0.42f, 0.72f, 0.87f, 0.8f);
+	Text::SetColor(0.42f, 0.72f, 0.87f, 0.8f * glitchAlpha);
 	Text::Draw("BEAM", 54.0f, 545.0f, 22.5f);
 	Text::Draw("CANNON", 54.0f, 562.0f, 22.5f);
 
-	Text::SetColor(0.42f, 0.72f, 0.87f, 0.8f);
+	Text::SetColor(0.42f, 0.72f, 0.87f, 0.8f * glitchAlpha);
 	Text::Draw("VULCAN", 54.0f, 662.0f, 22.5f);
-	Text::SetColor(0.42f, 0.72f, 0.87f, 0.8f);
-	Text::Draw(" ", 54.0f, 680.0f, 22.5f);
 
-	Text::SetColor(0.42f, 0.72f, 0.87f, 0.8f);
+	Text::SetColor(0.42f, 0.72f, 0.87f, 0.8f * glitchAlpha);
 	Text::Draw("HOMING", 54.0f, 782.0f, 22.5f);
-	Text::SetColor(0.42f, 0.72f, 0.87f, 0.8f);
 	Text::Draw("MISSLE", 54.0f, 800.0f, 22.5f);
 
 	int hpDisplayInt = (int)(HP_Layer1_DisplayPercent * 100.0f + 0.5f);

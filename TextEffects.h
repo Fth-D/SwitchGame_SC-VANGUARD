@@ -12,7 +12,6 @@
 float GetFadeAlpha(float timer, float speed);
 Float2 GetShakeOffset(float intensity);
 Float3 LerpColor(Float3 colorA, Float3 colorB, float t);
-Float3 GetHpDisplayColor(float hpPercent, float breatheTimer);
 
 // グリッチ・フリッカー：通常は1.0を返すが、稀にランダムで低輝度になる（信号不安定な演出）
 float GetGlitchFlicker(float timer, float glitchChance);
