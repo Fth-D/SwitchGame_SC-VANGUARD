@@ -60,8 +60,9 @@ float HP_Layer2_DisplayPrecent = 1.0f;
 float HP_Layer2_CatchUpSpeed = 2.5f;
 float HP_Layer2_HealCatchUpSpeed = 12.0f;
 
-float HP_BreatheTimer = 0.0f;		// ARMOR文字の呼吸・脈動エフェクト用タイマー
+float HP_BreatheSpeed = 0.0f;		// ARMOR文字の呼吸・脈動エフェクト用タイマー
 float UI_GlitchTimer = 0.0f;
+float UI_GlitchChance = 0.02f;		// 毎フレームグリッチが起こる確率
 float HP_RedFlickerSpeed = 12.0f;	// 危険状態のとき（赤）の点滅速度。大きいほど激しく点滅する
 float HP_BreatheScpped = 3.0f;		// 安全状態のとき（青）の呼吸速度
 
@@ -763,17 +764,19 @@ void Game::DrawGame()				// ここにゲームシーン描画コードを書く
 
 	int hpDisplayInt = (int)(HP_Layer1_DisplayPercent * 100.0f + 0.5f);
 	char hpText[16];
-	snprintf(hpText, sizeof(hpText), "%d%", hpDisplayInt);
-	
-	Float3 hpColor = GetHpDisplayColor(HP_Layer1_DisplayPercent, HP_BreatheTimer);
-	
-	Text::SetColor(hpColor.x, hpColor.y, hpColor.z, 1.0f);
+	snprintf(hpText, sizeof(hpText), "%d%%", hpDisplayInt);	// ★ %d% → %d%% 順手修正
+
+	PlayerCharacter::MechStatus hpStatus = Vanguard->GetMechStatus();
+	float hpAlpha = 1.0f;
+	Float3 hpColor = ComputeHpColor(hpStatus, HP_BreatheTimer, &hpAlpha);
+
+	Text::SetColor(hpColor.x, hpColor.y, hpColor.z, hpAlpha);
 	Text::Draw("Armor Integrity", 182.5f, 32.5f, 30.0f);
 
-	Text::SetColor(hpColor.x, hpColor.y, hpColor.z, 1.0f);
+	Text::SetColor(hpColor.x, hpColor.y, hpColor.z, hpAlpha);
 	Text::Draw(hpText, 255.0f, 41.5f, 68.0f);
 
-	Text::SetColor(hpColor.x, hpColor.y, hpColor.z, 1.0f);
+	Text::SetColor(hpColor.x, hpColor.y, hpColor.z, hpAlpha);
 	Text::Draw("%", 382.5f, 41.5f, 68.0f);
 
 
